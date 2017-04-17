@@ -1,0 +1,33 @@
+2017-04-17 19:42:07 - PHP Notice:  Undefined variable: column_left in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\common\home.tpl on line 3
+2017-04-17 19:42:07 - PHP Notice:  Undefined variable: column_left in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\common\home.tpl on line 4
+2017-04-17 19:42:07 - PHP Notice:  Undefined variable: column_left in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\common\home.tpl on line 6
+2017-04-17 19:43:22 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\common\home.tpl on line 14
+2017-04-17 22:53:22 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\order\order.php on line 4
+2017-04-17 22:53:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\system\engine\loader.php on line 83
+2017-04-17 22:53:22 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 22:53:22 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 22:54:26 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\order\order.php on line 4
+2017-04-17 22:54:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\system\engine\loader.php on line 83
+2017-04-17 22:54:26 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 22:54:26 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 22:54:41 - PHP Notice:  Undefined variable: data in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\order\order.php on line 4
+2017-04-17 22:54:41 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\system\engine\loader.php on line 83
+2017-04-17 22:54:41 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 22:54:41 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 22:56:36 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 22:56:36 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 22:58:34 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 22:58:34 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:09:45 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:09:45 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:09:46 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:09:46 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:10:16 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:10:16 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:10:43 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:10:43 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:10:48 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:10:48 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:10:51 - PHP Notice:  Undefined variable: header in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 1
+2017-04-17 23:10:51 - PHP Notice:  Undefined variable: footer in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\order\order.tpl on line 5
+2017-04-17 23:40:06 - PHP Notice:  Error: Could not load template D:/OpenServer/domains/OnlineStoreProject/catalog/view/theme/default/template/custom/service.tpl! in D:\OpenServer\domains\OnlineStoreProject\system\library\template\php.php on line 23
