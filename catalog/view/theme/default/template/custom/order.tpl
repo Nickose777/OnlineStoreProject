@@ -21,8 +21,8 @@
 			<div>
 				<h2 class="h2"><b>The product name</b></h2>
 				Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				<h3 class="h3">Color</h3>
-				<h3 class="h3"><b>Price</b></h3>
+				<h3 class="h3">Color: black</h3>
+				<h3 class="h3"><b>Price: 150</b></h3>
 
 				<button type="button" class="btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px">Order</button>
 			</div>
@@ -52,8 +52,8 @@
 			<div>
 				<h2 class="h2"><b>The product name</b></h2>
 				Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				<h3 class="h3">Color</h3>
-				<h3 class="h3"><b>Price</b></h3>
+				<h3 class="h3">Color: white</h3>
+				<h3 class="h3"><b>Price: 150</b></h3>
 
 				<button type="button" class="btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px">Order</button>
 			</div>
