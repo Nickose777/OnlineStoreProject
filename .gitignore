@@ -1,3 +1,4 @@
 !*.html
 !*.php
 !*.[png|jpg]
+!*.tpl
