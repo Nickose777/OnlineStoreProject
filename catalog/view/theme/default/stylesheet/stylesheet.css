@@ -312,8 +312,9 @@ div.required .control-label:before {
 }
 /* footer */
 footer {
+	min-height: 100px;
 	margin-top: 30px;
-	padding-top: 30px;
+	padding-top: 15px;
 	background-color: #303030;
 	border-top: 1px solid #ddd;
 	color: #e2e2e2;
