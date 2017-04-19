@@ -11,13 +11,13 @@
 				<h3 class="h3">Color: black</h3>
 		        <div class="input-group" style="max-width: 50px; margin-top: 15px;">
 		            <span class="input-group-btn">
-		                <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
+		                <button onclick="decreaseBlack();" type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
 		                	<span class="glyphicon glyphicon-minus"></span>
 		                </button>
 		            </span>
-		            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+		            <input onchange="onBlackUpdate();" type="text" id="quantity_black" name="quantity" class="form-control input-number" value="1" min="1" max="100">
 		            <span class="input-group-btn">
-		                <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
+		                <button onclick="increaseBlack();" type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
 		                	<span class="glyphicon glyphicon-plus"></span>
 		                </button>
 		            </span>
@@ -44,19 +44,18 @@
 				<h3 class="h3">Color: white</h3>
 		        <div class="input-group" style="max-width: 50px; margin-top: 15px;">
 		            <span class="input-group-btn">
-		                <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
+		                <button onclick="decreaseWhite();" type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
 		                	<span class="glyphicon glyphicon-minus"></span>
 		                </button>
 		            </span>
-		            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+		            <input onchange="onWhiteUpdate();" type="text" id="quantity_white" name="quantity" class="form-control input-number" value="1" min="1" max="100">
 		            <span class="input-group-btn">
-		                <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
+		                <button onclick="increaseWhite();" type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
 		                	<span class="glyphicon glyphicon-plus"></span>
 		                </button>
 		            </span>
 		        </div>
 				<h3 class="h3"><b>Price: 150</b></h3>
-
 			</div>
 		</div>
 		<div class="col-md-2">

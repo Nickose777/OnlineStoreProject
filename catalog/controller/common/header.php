@@ -26,6 +26,8 @@ class ControllerCommonHeader extends Controller {
 
 		$data['title'] = $this->document->getTitle();
 
+		$this->document->addScript('catalog/view/javascript/quantity_buttons.js');
+		
 		$data['base'] = $server;
 		$data['description'] = $this->document->getDescription();
 		$data['keywords'] = $this->document->getKeywords();

@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	background-image: url('../../../../../image/background.jpg');
+	background-image: url('/image/background.jpg');
 	/*color: #666;*/
 	font-size: 12px;
 	line-height: 20px;
