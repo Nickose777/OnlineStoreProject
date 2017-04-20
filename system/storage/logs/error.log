@@ -138,3 +138,5 @@
 2017-04-20 16:44:49 - PHP Notice:  Undefined index: image in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 6
 2017-04-20 16:49:22 - PHP Notice:  Undefined index: model in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 25
 2017-04-20 16:49:22 - PHP Notice:  Undefined index: model in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 25
+2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4
+2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4

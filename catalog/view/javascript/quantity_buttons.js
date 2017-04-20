@@ -1,66 +1,51 @@
-var whiteCount = 1;
-var blackCount = 1;
+var quantities = new Array();
 
 const MAX_COUNT = 100;
 
-function increaseWhite() {
-	if (whiteCount < MAX_COUNT) {
-		whiteCount++;
+function increase(index) {
+	var value = quantities[index];
+
+	if (value === undefined) {
+		value = 1;
 	}
 
-	updateWhite();
+	if (value < MAX_COUNT) {
+		quantities[index] = value + 1;
+		updateQuantity(index, quantities[index]);
+	}
 }
 
-function decreaseWhite() {
-	if (whiteCount > 1) {
-		whiteCount--;
+function decrease(index) {
+	var value = quantities[index];
+
+	if (value === undefined) {
+		value = 1;
 	}
 
-	updateWhite();
+	if (value > 1) {
+		quantities[index] = value - 1;
+		updateQuantity(index, quantities[index]);
+	}
 }
 
-function onWhiteUpdate() {
-	var value = $("#quantity_white").val();
+function onQuantityUpdate(index) {
+	var value = $("#quantity" + index).val();
 	value = parseInt(value);
 	if (!isNaN(value)) {
 		value = Math.abs(value);
-		whiteCount = value <= MAX_COUNT ? value : MAX_COUNT;
+		value = value <= MAX_COUNT ? value : MAX_COUNT;
+	}
+	else {
+		value = quantities[index];
+		if (value === undefined) {
+			value = 1;
+		}
 	}
 
-	updateWhite();
+	quantities[index] = value;
+	updateQuantity(index, value);
 }
 
-function updateWhite() {
-	$("#quantity_white").val(whiteCount);
-}
-
-function increaseBlack() {
-	if (blackCount < MAX_COUNT) {
-		blackCount++;
-	}
-
-	updateBlack();
-}
-
-function decreaseBlack() {
-	if (blackCount > 1) {
-		blackCount--;
-	}
-
-	updateBlack();
-}
-
-function onBlackUpdate() {
-	var value = $("#quantity_black").val();
-	value = parseInt(value);
-	if (!isNaN(value)) {
-		value = Math.abs(value);
-		blackCount = value <= MAX_COUNT ? value : MAX_COUNT;
-	}
-
-	updateBlack();
-}
-
-function updateBlack() {
-	$("#quantity_black").val(blackCount);
+function updateQuantity(index, newValue) {
+	$("#quantity" + index).val(newValue);
 }
