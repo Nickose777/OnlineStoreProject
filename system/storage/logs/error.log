@@ -145,3 +145,56 @@
 2017-04-20 19:45:26 - PHP Notice:  Undefined variable: products in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
 2017-04-20 19:45:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
 2017-04-23 17:59:47 - PHP Notice:  Undefined variable: product in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 4
+2017-04-23 19:50:09 - PHP Notice:  Undefined index: meta_title in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 20
+2017-04-23 19:50:09 - PHP Notice:  Undefined index: meta_description in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 21
+2017-04-23 19:50:09 - PHP Notice:  Undefined index: meta_keyword in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 22
+2017-04-23 19:50:09 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 24
+2017-04-23 19:50:09 - PHP Notice:  Undefined variable: products in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 19:50:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 19:50:56 - PHP Notice:  Undefined index: meta_title in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 20
+2017-04-23 19:50:56 - PHP Notice:  Undefined index: meta_description in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 21
+2017-04-23 19:50:56 - PHP Notice:  Undefined index: meta_keyword in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 22
+2017-04-23 19:50:56 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 24
+2017-04-23 19:50:56 - PHP Notice:  Undefined variable: products in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 19:50:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 19:51:00 - PHP Notice:  Undefined index: meta_title in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 20
+2017-04-23 19:51:00 - PHP Notice:  Undefined index: meta_description in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 21
+2017-04-23 19:51:00 - PHP Notice:  Undefined index: meta_keyword in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 22
+2017-04-23 19:51:00 - PHP Notice:  Undefined index: name in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 24
+2017-04-23 19:51:00 - PHP Notice:  Undefined variable: products in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 19:51:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 3
+2017-04-23 20:01:23 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:01:23 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:01:23 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:01:26 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:01:26 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:01:26 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:02:25 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:02:25 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:02:25 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:17 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:04:17 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:17 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:18 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:04:18 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:18 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:04:19 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:52:28 - PHP Notice:  Undefined variable: logo in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 11
+2017-04-23 20:52:28 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:52:28 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 14
+2017-04-23 20:53:58 - PHP Notice:  Undefined variable: server in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\home.php on line 11
+2017-04-23 20:53:58 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:53:58 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:53:58 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:55:53 - PHP Notice:  Undefined variable: server in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\home.php on line 11
+2017-04-23 20:55:53 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:55:53 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:55:53 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:58:50 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:58:50 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-23 20:58:50 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
