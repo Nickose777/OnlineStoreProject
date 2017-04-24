@@ -9,7 +9,7 @@
 
 		<div id="logo">
           <?php if ($logo) { ?>
-          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive center-block" style="max-height: 100px;"/></a>
           <?php } else { ?>
           <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
           <?php } ?>
