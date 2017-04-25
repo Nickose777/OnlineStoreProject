@@ -49,3 +49,13 @@ function onQuantityUpdate(index) {
 function updateQuantity(index, newValue) {
 	$("#quantity" + index).val(newValue);
 }
+
+function getQuantity(index) {
+	var value = quantities[index];
+
+	if (value === undefined) {
+		value = 1;
+	}
+
+	return value;
+}
