@@ -5,12 +5,12 @@
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<td class="text-center">Image</td>
-						<td class="text-left">Product</td>
-						<td class="text-left">Model</td>
-						<td class="text-left">Quantity</td>
-						<td class="text-right">Unit Price</td>
-						<td class="text-right">Total Price</td>
+						<td class="text-center"><?php echo $product_image_column; ?></td>
+						<td class="text-left"><?php echo $product_product_column; ?></td>
+						<td class="text-left"><?php echo $product_model_column; ?></td>
+						<td class="text-left"><?php echo $product_quantity_column; ?></td>
+						<td class="text-right"><?php echo $product_unit_column; ?></td>
+						<td class="text-right"><?php echo $product_total_column; ?></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,8 +30,8 @@
 							<div class="input-group btn-block" style="max-width: 200px;">
 								<input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
 								<span class="input-group-btn">
-									<button type="submit" data-toggle="tooltip" title="Update" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
-									<button type="button" data-toggle="tooltip" title="Remove" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
+									<button type="submit" data-toggle="tooltip" title="<?php echo $product_update_text; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+									<button type="button" data-toggle="tooltip" title="<?php echo $product_remove_text; ?>" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
 								</span>
 							</div>
 						</td>
@@ -43,47 +43,25 @@
 			</table>
 		</div>
 	</form>
-</div>
-<!-- <div class="container">
-	<div class="row">
-		<div class="col-md-3 text-center">
-			<img class="img-rounded" src="image/img.jpg" alt="Image" style="max-height: 200px;">
-		</div>
-		<div class="col-md-7">
-			<div>
-				<h2 class="h2"><b>The product name</b></h2>
-				Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				<h3 class="h3">Color: black</h3>
-		        <div class="input-group" style="max-width: 50px; margin-top: 15px;">
-		            <span class="input-group-btn">
-		                <button type="button" class="quantity-left-minus btn btn-number"  data-type="minus" data-field="">
-		                	<span class="glyphicon glyphicon-minus"></span>
-		                </button>
-		            </span>
-		            <input type="text" name="quantity" class="form-control input-number" value="1" min="1" max="100">
-		            <span class="input-group-btn">
-		                <button type="button" class="quantity-right-plus btn btn-number" data-type="plus" data-field="">
-		                	<span class="glyphicon glyphicon-plus"></span>
-		                </button>
-		            </span>
-		        </div>
-				<h3 class="h3"><b>Price: 150</b></h3>
 
-			</div>
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-8">
+			<table class="table table-bordered">
+				<tr>
+					<td class="text-right"><strong><?php echo $total_sum_text; ?>:</strong></td>
+					<td class="text-right"><?php echo $total_sum; ?></td>
+				</tr>
+			</table>
 		</div>
-		<div class="col-md-2">
-			<button type="button" class="btn btn-danger btn-md" style="vertical-align: middle;width: 150px; border-radius: 5px">Delete</button>
+	</div>
+
+	<div class="buttons clearfix">
+		<div class="pull-left">
+			<a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_shopping_text; ?></a>
+		</div>
+		<div class="pull-right">
+			<a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout_text; ?></a>
 		</div>
 	</div>
-	
-	<div class="row" style="margin-bottom: 20px">
-		<h3 class="h3 pull-right">Total: 300</h3>
-	</div>
-	<div class="row" style="margin-bottom: 20px">
-		<button type="button" class="btn btn-success btn-lg pull-right" style="font-size: 20px; width: 150px; border-radius: 10px">Checkout</button>
-	</div>
-	<div class="row" style="margin-bottom: 20px">
-		<button type="button" class="btn btn-info-outline btn-lg pull-right" style="font-size: 15px; width: 100px; border-radius: 5px">Back</button>
-	</div>
-</div> -->
+</div>
 <?php echo $footer; ?>
