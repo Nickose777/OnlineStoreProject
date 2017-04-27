@@ -138,6 +138,7 @@
 2017-04-20 16:44:49 - PHP Notice:  Undefined index: image in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 6
 2017-04-20 16:49:22 - PHP Notice:  Undefined index: model in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 25
 2017-04-20 16:49:22 - PHP Notice:  Undefined index: model in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 25
+<<<<<<< HEAD
 2017-04-20 19:45:26 - PHP Notice:  Undefined index: meta_title in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 20
 2017-04-20 19:45:26 - PHP Notice:  Undefined index: meta_description in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 21
 2017-04-20 19:45:26 - PHP Notice:  Undefined index: meta_keyword in D:\OpenServer\domains\OnlineStoreProject\catalog\controller\custom\order.php on line 22
@@ -264,3 +265,7 @@
 2017-04-27 17:38:17 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
 2017-04-27 17:38:17 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
 2017-04-27 17:38:17 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+=======
+2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4
+2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4
+>>>>>>> 89c66e4e50d1c52841ba573d54354e0fec8053e9
