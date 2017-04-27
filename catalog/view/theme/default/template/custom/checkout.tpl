@@ -10,6 +10,15 @@
 		<p><input type="text" class="checkout-input checkout-name" placeholder="Country" autofocus></p>
 		<p><input type="text" class="checkout-input checkout-name" placeholder="Postal Code" autofocus></p>
 
+		<div class="radio-btn">
+			<p>Payment Method</p>
+			<p><input type="radio" name="Payment Method" value="&&&&&&&&&&">&&&&&&&&&</p>
+			<p><input type="radio" name="Payment Method" value="&&&&&&&&&&" checked="">&&&&&&&&&&</p>
+			<p>Delivery Method</p>
+			<p><input type="radio" name="Delivery Method" value="&&&&&&&&&&">$$$$$$$</p>
+			<p><input type="radio" name="Delivery Method" value="&&&&&&&&&&" checked="">$$$$$$$$$$</p>
+		</div>
+
 		<button type="button" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px">Order</button><br>
 		<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px">Back</button>
 	</div>			

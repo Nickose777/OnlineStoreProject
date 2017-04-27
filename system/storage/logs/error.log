@@ -261,3 +261,6 @@
 2017-04-24 11:46:07 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
 2017-04-24 11:46:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
 2017-04-24 11:46:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-27 17:38:17 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-27 17:38:17 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-27 17:38:17 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
