@@ -9,7 +9,7 @@ class ControllerCustomCart extends Controller {
 
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-		
+
 		if ($this->cart->hasProducts()) {
 			$data['action'] = $this->url->link('custom/cart/edit', '', true);
 
