@@ -3,3 +3,4 @@
 !*.[png|jpg]
 !*.tpl
 cache/
+system/storage/logs/error.log

@@ -268,4 +268,10 @@
 =======
 2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4
 2017-04-20 18:08:32 - PHP Notice:  Undefined variable: index in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\order.tpl on line 4
+<<<<<<< HEAD
 >>>>>>> 89c66e4e50d1c52841ba573d54354e0fec8053e9
+=======
+2017-04-25 21:26:02 - PHP Notice:  Undefined variable: action in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\cart.tpl on line 3
+2017-04-25 21:26:02 - PHP Notice:  Undefined variable: products in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\cart.tpl on line 17
+2017-04-25 21:26:02 - PHP Warning:  Invalid argument supplied for foreach() in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\cart.tpl on line 17
+>>>>>>> 4e2d7b1b1ab42bc490097fec0051a39daef9267a

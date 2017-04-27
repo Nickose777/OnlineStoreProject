@@ -176,7 +176,7 @@ var cart = {
 	},
 	'update': function(key, quantity) {
 		$.ajax({
-			url: 'index.php?route=checkout/cart/edit',
+			url: 'index.php?route=custom/cart/edit',//'index.php?route=checkout/cart/edit',
 			type: 'post',
 			data: 'key=' + key + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
 			dataType: 'json',
@@ -205,7 +205,7 @@ var cart = {
 	},
 	'remove': function(key) {
 		$.ajax({
-			url: 'index.php?route=checkout/cart/remove',
+			url: 'index.php?route=custom/cart/remove',//'index.php?route=checkout/cart/remove',
 			type: 'post',
 			data: 'key=' + key,
 			dataType: 'json',
