@@ -252,3 +252,12 @@
 2017-04-24 11:18:12 - PHP Notice:  Undefined variable: content_top in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\checkout.tpl on line 3
 2017-04-24 11:19:19 - PHP Notice:  Undefined variable: content_top in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\checkout.tpl on line 3
 2017-04-24 11:19:21 - PHP Notice:  Undefined variable: content_top in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\checkout.tpl on line 3
+2017-04-24 11:43:07 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:43:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:43:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:06 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:06 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:06 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:07 - PHP Notice:  Undefined variable: home in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
+2017-04-24 11:46:07 - PHP Notice:  Undefined variable: name in D:\OpenServer\domains\OnlineStoreProject\catalog\view\theme\default\template\custom\home.tpl on line 12
