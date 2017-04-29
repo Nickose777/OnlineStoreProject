@@ -40,13 +40,20 @@
 <body class="<?php echo $class; ?>">
 <nav id="top">
   <div class="container">
-    <?php echo $currency; ?>
+   <!--  <?php echo $currency; ?> -->
     <?php echo $language; ?>
 
-    <a href="<?php echo $home; ?>" title="Home">Home</a> <!-- !!! UI and icon for this link -->
+    <div id="top-links" class="nav pull-left">
+      <ul class="list-inline">
+    <li><a href="<?php echo $home; ?>" title="Home"><i class="fa fa-home"></i> <span class="hidden-xs hidden-sm hidden-md">Home</span></a></li> <!-- !!! UI and icon for this link -->
+    <li><a href="" title="Product"> <span class="hidden-xs hidden-sm hidden-md">Products</span></a></li> <!-- TODO link to products page -->
+      </ul>
+    </div>
+    
 
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
+      <li><i class="fa fa-globe"></i> <span class="hidden-xs hidden-sm hidden-md">Change language</span></a></li><!--!!!!! TODO Choice of languages -->
         <!-- <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li> -->
         <!-- <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right">
