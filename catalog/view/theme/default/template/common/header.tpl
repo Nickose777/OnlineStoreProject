@@ -42,6 +42,9 @@
   <div class="container">
     <?php echo $currency; ?>
     <?php echo $language; ?>
+
+    <a href="<?php echo $home; ?>" title="Home">Home</a> <!-- !!! UI and icon for this link -->
+
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
         <!-- <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li> -->

@@ -137,8 +137,8 @@ class ControllerCommonCart extends Controller {
 			);
 		}
 
-		$data['cart'] = $this->url->link('checkout/cart');
-		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
+		$data['cart'] = $this->url->link('custom/cart');
+		$data['checkout'] = $this->url->link('custom/checkout', '', true);
 
 		return $this->load->view('common/cart', $data);
 	}

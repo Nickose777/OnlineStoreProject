@@ -27,6 +27,7 @@ class ControllerCustomCart extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
+		$data['products'] = array();
 		if ($this->cart->hasProducts()) {
 			$data['action'] = $this->url->link('custom/cart/edit', '', true);
 			$data['continue'] = $this->url->link('custom/order', '', true);
@@ -34,8 +35,6 @@ class ControllerCustomCart extends Controller {
 
 			$this->load->model('tool/image');
 			$this->load->model('tool/upload');
-
-			$data['products'] = array();
 
 			$total_sum = 0;
 			$products = $this->cart->getProducts();

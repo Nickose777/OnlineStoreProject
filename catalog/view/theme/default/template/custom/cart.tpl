@@ -1,5 +1,6 @@
 <?php echo $header; ?>
 <div class="container">
+	<?php if ($products) {?>
 	<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 		<div class="table-responsive">
 			<table class="table table-bordered">
@@ -63,5 +64,10 @@
 			<a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout_text; ?></a>
 		</div>
 	</div>
+	<?php } else {?>
+	<div class="centered">
+    	<h2 class="h2">No products in the cart!</h2>
+	</div>
+	<?php }?>
 </div>
 <?php echo $footer; ?>

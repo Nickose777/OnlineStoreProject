@@ -71,8 +71,6 @@ class ControllerCheckoutCart extends Controller {
 			$this->load->model('tool/image');
 			$this->load->model('tool/upload');
 
-			$data['products'] = array();
-
 			$products = $this->cart->getProducts();
 
 			foreach ($products as $product) {
