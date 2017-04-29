@@ -20,7 +20,7 @@ class ControllerCustomHome extends Controller {
 		}
 
 		$data['order_page'] = $this->url->link('custom/order');
-		$data['name'] = 'TODO - NAME';
+		$data['name'] = 'Logo';
 
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['footer'] = $this->load->controller('common/footer');
