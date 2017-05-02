@@ -46,7 +46,7 @@
     <div id="top-links" class="nav pull-left">
       <ul class="list-inline">
     <li><a href="<?php echo $home; ?>" title="Home"><i class="fa fa-home"></i> <span class="hidden-xs hidden-sm hidden-md">Home</span></a></li> <!-- !!! UI and icon for this link -->
-    <li><a href="" title="Product"> <span class="hidden-xs hidden-sm hidden-md">Products</span></a></li> <!-- TODO link to products page -->
+    <li><a href="http://onlinestoreproject:81/index.php?route=custom/order" title="Product"> <span class="hidden-xs hidden-sm hidden-md">Products</span></a></li> <!-- TODO link to products page -->
       </ul>
     </div>
     

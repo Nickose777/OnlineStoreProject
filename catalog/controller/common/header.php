@@ -130,6 +130,9 @@ class ControllerCommonHeader extends Controller {
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
 
+		// TODO!!!
+		$data['order_page_link'] = $this->url->link('custom/order', '', true);
+
 		// For page specific css
 		if (isset($this->request->get['route'])) {
 			if (isset($this->request->get['product_id'])) {

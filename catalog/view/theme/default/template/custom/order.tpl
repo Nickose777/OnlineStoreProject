@@ -3,7 +3,7 @@
 	<?php foreach ($products as $index => $product) { ?>
 		<div class="row">
 			<div class="col-md-3 text-center">
-				<img class="img-rounded" src="<?php echo $product['thumb']; ?>" alt="Image" style="max-height: 200px;">
+				<img class="img-rounded" src="<?php echo $product['thumb']; ?>" alt="Image" style="max-width: 200px;">
 		        <div class="input-group container" style="max-width: 50px; margin-top: 15px;">
 		            <span class="input-group-btn">
 		                <button onclick="decrease(<?php echo $index; ?>);" type="button" class="quantity-left-minus btn btn-number" data-type="minus" data-field="">
