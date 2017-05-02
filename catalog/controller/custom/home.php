@@ -26,6 +26,8 @@ class ControllerCustomHome extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 		
+		$data['gallery'] = $this->load->view('common/gallery');
+
 		$this->response->setOutput($this->load->view('custom/home', $data));
 	}
 }
