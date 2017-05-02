@@ -1,7 +1,8 @@
 <?php echo $header; ?>
 <div id="content">
 	<?php echo $content_top; ?>
-	<img class="img-rounded center-block" src="/image/catalog/demo/banners/gallery.png" alt="gallery" style="max-height: 600px;"><br><br>
+	<?php echo $gallery; ?>
+	<!-- <img class="img-rounded center-block" src="/image/catalog/demo/banners/gallery.png" alt="gallery" style="max-height: 600px;"><br><br> -->
 
 	<p class="text-center" style="font-size: 20px; font-weight: bold;">Обеспечивает идеальную посадку.</p>
 	<p class="text-center" style="font-size: 20px; font-weight: bold;">Эти высококачественные изделия хорошо впишутся в гардероб мужчины любого возраста.</p>
