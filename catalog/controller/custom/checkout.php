@@ -1,6 +1,11 @@
 <?php  
 class ControllerCustomCheckout extends Controller {
 	public function index() {
+		if (!$this->cart->hasProducts()) {
+			$cart_url = $this->url->link('custom/cart');
+			header('Location: ' . $cart_url);
+		}
+
 		$this->document->setTitle($this->config->get('config_meta_title'));
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
@@ -10,7 +15,8 @@ class ControllerCustomCheckout extends Controller {
 		$data['entry_email'] = "E-Mail";
 		$data['entry_telephone'] = "Phone number";
 		$data['entry_company'] = "Company";
-		$data['entry_address_1'] = "Address";
+		$data['entry_street'] = "Street";
+		$data['entry_house'] = "House";
 		$data['entry_city'] = "City";
 		$data['entry_postcode'] = "Postcode";
 		$data['entry_country'] = "Country";
@@ -67,10 +73,19 @@ class ControllerCustomCheckout extends Controller {
 			$data['company'] = '';
 		}
 
+		$validAddress = false;
 		if (isset($this->session->data['payment_address']['address_1'])) {
-			$data['address_1'] = $this->session->data['payment_address']['address_1'];
-		} else {
-			$data['address_1'] = '';
+			$address = explode(";", $this->session->data['payment_address']['address_1']);
+			if (count($address) == 2) {
+				$data['street'] = trim($address[0]);
+				$data['house'] = trim($address[1]);
+
+				$validAddress = true;
+			}
+		} 
+		if (!$validAddress) {
+			$data['street'] = "";
+			$data['house'] = "";
 		}
 
 		if (isset($this->session->data['payment_address']['postcode'])) {
@@ -220,7 +235,7 @@ class ControllerCustomCheckout extends Controller {
 				$validationSucceeded = false;
 			}
 
-			if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
+			if ((utf8_strlen(trim($this->request->post['street'])) < 3) || (utf8_strlen(trim($this->request->post['street'])) > 128) || (utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
 				$json['error']['address_1'] = $this->language->get('error_address_1');
 				$validationSucceeded = false;
 			}
@@ -269,10 +284,12 @@ class ControllerCustomCheckout extends Controller {
 			$this->session->data['guest']['fax'] = "";
 			$this->session->data['guest']['custom_field'] = array();
 
+			$addressResult = $this->request->post['street'] . " ; " . $this->request->post['house'];
+
 			$this->session->data['payment_address']['firstname'] = $this->request->post['firstname'];
 			$this->session->data['payment_address']['lastname'] = $this->request->post['lastname'];
 			$this->session->data['payment_address']['company'] = $this->request->post['company'];
-			$this->session->data['payment_address']['address_1'] = $this->request->post['address_1'];
+			$this->session->data['payment_address']['address_1'] = $addressResult;
 			$this->session->data['payment_address']['address_2'] = "";
 			$this->session->data['payment_address']['postcode'] = $this->request->post['postcode'];
 			$this->session->data['payment_address']['city'] = $this->request->post['city'];
@@ -313,7 +330,7 @@ class ControllerCustomCheckout extends Controller {
 			$this->session->data['shipping_address']['firstname'] = $this->request->post['firstname'];
 			$this->session->data['shipping_address']['lastname'] = $this->request->post['lastname'];
 			$this->session->data['shipping_address']['company'] = $this->request->post['company'];
-			$this->session->data['shipping_address']['address_1'] = $this->request->post['address_1'];
+			$this->session->data['shipping_address']['address_1'] = $addressResult;
 			$this->session->data['shipping_address']['address_2'] = "";
 			$this->session->data['shipping_address']['postcode'] = $this->request->post['postcode'];
 			$this->session->data['shipping_address']['city'] = $this->request->post['city'];

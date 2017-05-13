@@ -22,8 +22,12 @@
         <input type="text" name="company" placeholder="<?php echo $entry_company; ?>" value="<?php echo $company; ?>" id="input-payment-company" class="form-control" />
       </div>
       <div class="form-group required">
-        <label class="control-label" for="input-payment-address-1"><?php echo $entry_address_1; ?></label>
-        <input type="text" name="address_1" placeholder="<?php echo $entry_address_1; ?>" value="<?php echo $address_1; ?>" id="input-payment-address-1" class="form-control" />
+        <label class="control-label" for="input-payment-street"><?php echo $entry_street; ?></label>
+        <input type="text" name="street" placeholder="<?php echo $entry_street; ?>" value="<?php echo $street; ?>" id="input-payment-street" class="form-control" />
+      </div>
+      <div class="form-group required">
+        <label class="control-label" for="input-payment-house"><?php echo $entry_house; ?></label>
+        <input type="text" name="house" placeholder="<?php echo $entry_house; ?>" value="<?php echo $house; ?>" id="input-payment-house" class="form-control" />
       </div>
       <div class="form-group required">
         <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label>
@@ -88,9 +92,10 @@
             <h4 class="modal-title">Confirm order</h4>
           </div>
           <div class="modal-body">
-            <p>Press button to confirm your order</p>
+            <p>TODO. Press button to confirm your order</p>
           </div>
           <div class="modal-footer">
+            <div id="payment-content" class="pull-left"></div>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -113,9 +118,9 @@ $('select[name=\'country_id\']').on('change', function() {
     },
     success: function(json) {
       if (json['postcode_required'] == '1') {
-        $('input[name=\'postcode\']').parent().parent().addClass('required');
+        $('input[name=\'postcode\']').parent().addClass('required');
       } else {
-        $('input[name=\'postcode\']').parent().parent().removeClass('required');
+        $('input[name=\'postcode\']').parent().removeClass('required');
       }
 
       html = '<option value=""><?php echo $text_select; ?></option>';
@@ -166,7 +171,7 @@ $('select[name=\'country_id\']').trigger('change');
               alert("Some errors");
             }
             else {
-              $('#confirm_modal .modal-body').html(json['payment_html']);
+              $('#confirm_modal #payment-content').html(json['payment_html']);
               $('#confirm_modal').modal('show');
             }
           },
