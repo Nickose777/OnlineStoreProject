@@ -86,7 +86,7 @@
 			
     	<div class="form-check ">
     		<?php if ($payment_methods) { ?>
-        <p><?php echo $text_payment_method; ?></p>
+        <h2><?php echo $text_payment_method; ?></h2><hr>
         <?php foreach ($payment_methods as $payment_method) { ?>
         <div class="radio ">
           <label>
@@ -105,8 +105,9 @@
         <?php } ?>
     	</div>
 
-			<button type="button" id="confirm_order" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px">Order</button>
-      <br>
+			 <!-- <button type="button" id="confirm_order" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px;">Order</button><br>  -->
+        <button type="button" id="confirm_order" class="btn center-block btn  btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px; background: #303030; color: #ffffff;">Order</button>
+      <br>  
 
 			<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px">Back</button>	
 		</form>
@@ -120,11 +121,19 @@
             <h4 class="modal-title">Confirm order</h4>
           </div>
           <div class="modal-body">
-            <p>TODO. Press button to confirm your order</p>
+            <p>Fullname: <?php echo $fullname_text; ?></p>
+            <p>Address: <?php echo $address_text; ?></p>
+            <p>Country: <?php echo $country_text; ?></p>
+            <p>Region: <?php echo $region_text; ?></p>
+            <p>E-mail: <?php echo $email_text; ?></p>
+            <p>Phone number: <?php echo $phonenumber_text; ?></p>
+            <p>Press button to confirm your order</p>
           </div>
           <div class="modal-footer">
             <div id="payment-content" class="pull-left"></div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div class="buttons">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
 
