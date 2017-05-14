@@ -32,6 +32,7 @@
 			</div>
 
 			<br></br>
+			<hr>
 			<br></br>
 	    <?php } ?>
 	<?php } else { ?>
