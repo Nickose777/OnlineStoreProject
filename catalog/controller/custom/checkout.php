@@ -598,6 +598,9 @@ class ControllerCustomCheckout extends Controller {
             $json['street'] = $this->request->post['street'];
             $json['house'] = $this->request->post['house'];
             $json['postcode'] = $this->request->post['postcode'];
+            if (strlen($this->request->post['company']) > 0) {
+            	$json['company'] = $this->request->post['company'];
+            }
 		}
 
 		$this->response->addHeader('Content-Type: application/json');

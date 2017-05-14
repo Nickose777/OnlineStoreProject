@@ -129,6 +129,7 @@
             <p>Street: <span id="street"></span></p>
             <p>House: <span id="house"></span></p>
             <p>Postcode: <span id="postcode"></span></p>
+            <p>Company: <span id="company"></span></p>
             <hr>
             <p>Press button to confirm your order</p>
           </div>
@@ -230,6 +231,8 @@ $('select[name=\'country_id\']').trigger('change');
                 $('#confirm_modal .modal-body #street').html(json['street']);
                 $('#confirm_modal .modal-body #house').html(json['house']);
                 $('#confirm_modal .modal-body #postcode').html(json['postcode']);
+                var company = json['company'] !== undefined ? json['company'] : "No company";
+                $('#confirm_modal .modal-body #company').html(company);
 
                 $('#confirm_modal #payment-content').html(json['payment_html']);
                 $('#confirm_modal').modal('show');
