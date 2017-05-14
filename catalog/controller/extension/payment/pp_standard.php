@@ -84,7 +84,7 @@ class ControllerExtensionPaymentPPStandard extends Controller {
 			$data['email'] = $order_info['email'];
 			$data['invoice'] = $this->session->data['order_id'] . ' - ' . html_entity_decode($order_info['payment_firstname'], ENT_QUOTES, 'UTF-8') . ' ' . html_entity_decode($order_info['payment_lastname'], ENT_QUOTES, 'UTF-8');
 			$data['lc'] = $this->session->data['language'];
-			$data['return'] = $this->url->link('checkout/success');
+			$data['return'] = $this->url->link('custom/success');
 			$data['notify_url'] = $this->url->link('extension/payment/pp_standard/callback', '', true);
 			$data['cancel_return'] = $this->url->link('checkout/checkout', '', true);
 

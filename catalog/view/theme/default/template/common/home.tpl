@@ -1,4 +1,4 @@
-<?php echo $header; ?>
+<!-- <?php echo $header; ?>
 <div class="container">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
@@ -11,4 +11,7 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?><?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
-<?php echo $footer; ?>
+<?php echo $footer; ?> -->
+<?php
+    header('Location: index.php?route=custom/home') ;
+?>

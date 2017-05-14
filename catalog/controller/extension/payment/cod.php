@@ -5,7 +5,7 @@ class ControllerExtensionPaymentCod extends Controller {
 
 		$data['text_loading'] = $this->language->get('text_loading');
 
-		$data['continue'] = $this->url->link('checkout/success');
+		$data['continue'] = $this->url->link('custom/success');
 
 		return $this->load->view('extension/payment/cod', $data);
 	}
