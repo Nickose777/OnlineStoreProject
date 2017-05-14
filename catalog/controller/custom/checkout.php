@@ -276,7 +276,8 @@ class ControllerCustomCheckout extends Controller {
 
 		if ($validationSucceeded) {
 			$this->session->data['account'] = 'guest';
-			$this->session->data['guest']['customer_group_id'] = $this->config->get('config_customer_group_id');;
+			$this->session->data['guest']['customer_group_id'] = $this->config->get('config_customer_group_id');
+			$this->session->data['guest']['salutation'] = $this->request->post['salutation'];
 			$this->session->data['guest']['firstname'] = $this->request->post['firstname'];
 			$this->session->data['guest']['lastname'] = $this->request->post['lastname'];
 			$this->session->data['guest']['email'] = $this->request->post['email'];

@@ -5,7 +5,7 @@
       <div class="row">
          <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <label class="control-label" for="input-payment-anrede">Anrede</label>
-            <select name="anrede" id="input-payment-anrede" class="form-control">
+            <select name="salutation" id="input-payment-anrede" class="form-control">
              <option value="herr" selected="selected">Herr</option>
              <option value="frau">Frau</option>
            </select>
