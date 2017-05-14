@@ -121,12 +121,15 @@
             <h4 class="modal-title">Confirm order</h4>
           </div>
           <div class="modal-body">
-            <p>Fullname: <?php echo $fullname_text; ?></p>
-            <p>Address: <?php echo $address_text; ?></p>
-            <p>Country: <?php echo $country_text; ?></p>
-            <p>Region: <?php echo $region_text; ?></p>
-            <p>E-mail: <?php echo $email_text; ?></p>
-            <p>Phone number: <?php echo $phonenumber_text; ?></p>
+            <p>Fullname: <span id="fullname"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Phone number: <span id="phonenumber"></span></p>
+            <p>Country: <span id="country"></span></p>
+            <p>Region: <span id="region"></span></p>
+            <p>Street: <span id="street"></span></p>
+            <p>House: <span id="house"></span></p>
+            <p>Postcode: <span id="postcode"></span></p>
+            <hr>
             <p>Press button to confirm your order</p>
           </div>
           <div class="modal-footer">
@@ -219,6 +222,15 @@ $('select[name=\'country_id\']').trigger('change');
               $('.text-danger').parent().addClass('has-error');
               }
               else {
+                $('#confirm_modal .modal-body #fullname').html(json['fullname']);
+                $('#confirm_modal .modal-body #email').html(json['email']);
+                $('#confirm_modal .modal-body #phonenumber').html(json['phonenumber']);
+                $('#confirm_modal .modal-body #country').html(json['country']);
+                $('#confirm_modal .modal-body #region').html(json['region']);
+                $('#confirm_modal .modal-body #street').html(json['street']);
+                $('#confirm_modal .modal-body #house').html(json['house']);
+                $('#confirm_modal .modal-body #postcode').html(json['postcode']);
+
                 $('#confirm_modal #payment-content').html(json['payment_html']);
                 $('#confirm_modal').modal('show');
               }

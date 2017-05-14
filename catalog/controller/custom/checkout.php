@@ -589,6 +589,15 @@ class ControllerCustomCheckout extends Controller {
 			$this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
 
 			$json['payment_html'] = $this->load->controller('extension/payment/' . $this->session->data['payment_method']['code']);
+
+            $json['fullname'] = $this->request->post['firstname'] . " " . $this->request->post['lastname'];
+            $json['email'] = $this->request->post['email'];
+            $json['phonenumber'] = $this->request->post['telephone'];
+            $json['country'] = $country_info['name'];
+            $json['region'] = $zone_info['name'];
+            $json['street'] = $this->request->post['street'];
+            $json['house'] = $this->request->post['house'];
+            $json['postcode'] = $this->request->post['postcode'];
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
