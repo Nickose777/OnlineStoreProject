@@ -4,10 +4,10 @@
       <h2>Adresse</h2><hr>
       <div class="row">
          <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <label class="control-label" for="input-payment-anrede">Anrede</label>
-            <select name="salutation" id="input-payment-anrede" class="form-control">
-             <option value="herr" selected="selected">Herr</option>
-             <option value="frau">Frau</option>
+            <label class="control-label" for="input-payment-salutation">Anrede</label>
+            <select name="salutation" id="input-payment-salutation" class="form-control">
+             <option value="Herr" selected="selected">Herr</option>
+             <option value="Frau">Frau</option>
            </select>
          </div>
       </div>
@@ -196,12 +196,23 @@ $('select[name=\'country_id\']').trigger('change');
               location = json['redirect'];
             } 
             else if (json['error']) {
-              alert("Some errors");
-            }
-            else {
-              $('#confirm_modal #payment-content').html(json['payment_html']);
-              $('#confirm_modal').modal('show');
-            }
+              for (i in json['error']) {
+                var element = $('#input-payment-' + i.replace('_', '-'));
+
+                if ($(element).parent().hasClass('input-group')) {
+                  $(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
+                } else {
+                  $(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
+                }
+              }
+
+              // Highlight any found errors
+              $('.text-danger').parent().addClass('has-error');
+              }
+              else {
+                $('#confirm_modal #payment-content').html(json['payment_html']);
+                $('#confirm_modal').modal('show');
+              }
           },
           error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
