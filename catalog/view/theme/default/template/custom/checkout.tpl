@@ -1,43 +1,54 @@
 <?php echo $header; ?>
-	<div id="content">
+	<div id="content" class="grid container">
 		<form>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-firstname"><?php echo $entry_firstname; ?></label>
-        <input type="text" name="firstname" placeholder="<?php echo $entry_firstname; ?>" value="<?php echo $firstname; ?>" id="input-payment-firstname" class="form-control" />
+      <h2>Adresse</h2><hr>
+      <div class="row">
+         <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <label class="control-label" for="input-payment-anrede">Anrede</label>
+            <select name="anrede" id="input-payment-anrede" class="form-control">
+             <option value="herr" selected="selected">Herr</option>
+             <option value="frau">Frau</option>
+           </select>
+         </div>
       </div>
-      <div class="form-group required">
+      <div class="row">
+        <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <label class="control-label " for="input-payment-firstname"><?php echo $entry_firstname; ?></label>
+          <input type="text" name="firstname" placeholder="<?php echo $entry_firstname; ?>" value="<?php echo $firstname; ?>" id="input-payment-firstname" class="form-control" /> 
+        </div>
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-lastname"><?php echo $entry_lastname; ?></label>
         <input type="text" name="lastname" placeholder="<?php echo $entry_lastname; ?>" value="<?php echo $lastname; ?>" id="input-payment-lastname" class="form-control" />
       </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-email"><?php echo $entry_email; ?></label>
-        <input type="text" name="email" placeholder="<?php echo $entry_email; ?>" value="<?php echo $email; ?>" id="input-payment-email" class="form-control" />
       </div>
-      <div class="form-group required">
-        <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
-        <input type="text" name="telephone" placeholder="<?php echo $entry_telephone; ?>" value="<?php echo $telephone; ?>" id="input-payment-telephone" class="form-control" />
-      </div>
-      <div class="form-group">
+      <div class="row">
+      <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-company"><?php echo $entry_company; ?></label>
         <input type="text" name="company" placeholder="<?php echo $entry_company; ?>" value="<?php echo $company; ?>" id="input-payment-company" class="form-control" />
       </div>
-      <div class="form-group required">
+      </div>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-street"><?php echo $entry_street; ?></label>
         <input type="text" name="street" placeholder="<?php echo $entry_street; ?>" value="<?php echo $street; ?>" id="input-payment-street" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-house"><?php echo $entry_house; ?></label>
         <input type="text" name="house" placeholder="<?php echo $entry_house; ?>" value="<?php echo $house; ?>" id="input-payment-house" class="form-control" />
       </div>
-      <div class="form-group required">
+      </div>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-city"><?php echo $entry_city; ?></label>
         <input type="text" name="city" placeholder="<?php echo $entry_city; ?>" value="<?php echo $city; ?>" id="input-payment-city" class="form-control" />
       </div>
-      <div class="form-group required">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-postcode"><?php echo $entry_postcode; ?></label>
         <input type="text" name="postcode" placeholder="<?php echo $entry_postcode; ?>" value="<?php echo $postcode; ?>" id="input-payment-postcode" class="form-control" />
       </div>
-      <div class="form-group required">
+      </div>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
         <select name="country_id" id="input-payment-country" class="form-control">
           <option value=""><?php echo $text_select; ?></option>
@@ -50,17 +61,34 @@
           <?php } ?>
         </select>
       </div>
-      <div class="form-group required">
+      </div>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-zone"><?php echo $entry_zone; ?></label>
         <select name="zone_id" id="input-payment-zone" class="form-control">
         </select>
-      </div>	
+      </div>
+      </div>  
+      <h2>Kontaktdaten</h2><hr>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="control-label" for="input-payment-email"><?php echo $entry_email; ?></label>
+        <input type="text" name="email" placeholder="<?php echo $entry_email; ?>" value="<?php echo $email; ?>" id="input-payment-email" class="form-control" />
+      </div>
+      </div>
+      <div class="row">
+      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
+        <input type="text" name="telephone" placeholder="<?php echo $entry_telephone; ?>" value="<?php echo $telephone; ?>" id="input-payment-telephone" class="form-control" />
+      </div>
+      </div>
+      
 			
-    	<div class="form-check">
+    	<div class="form-check ">
     		<?php if ($payment_methods) { ?>
         <p><?php echo $text_payment_method; ?></p>
         <?php foreach ($payment_methods as $payment_method) { ?>
-        <div class="radio">
+        <div class="radio ">
           <label>
             <?php if ($payment_method['code'] == $selected_payment_code) { ?>
             <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>" checked="checked" />
