@@ -192,6 +192,7 @@ $('select[name=\'country_id\']').trigger('change');
 
 <script>
   $(document).delegate('#confirm_order', 'click', function() {
+  	$(".text-danger").remove();
       $.ajax({
           url: 'index.php?route=custom/checkout/validate',
           type: 'post',

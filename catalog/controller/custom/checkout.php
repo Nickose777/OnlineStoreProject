@@ -237,8 +237,13 @@ class ControllerCustomCheckout extends Controller {
 				$validationSucceeded = false;
 			}
 
-			if ((utf8_strlen(trim($this->request->post['street'])) < 3) || (utf8_strlen(trim($this->request->post['street'])) > 128) || (utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
-				$json['error']['address_1'] = $this->language->get('error_address_1');
+			if ((utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
+				$json['error']['house'] = $this->language->get('error_house');
+				$validationSucceeded = false;
+			}
+
+			if ((utf8_strlen(trim($this->request->post['street'])) < 3) || (utf8_strlen(trim($this->request->post['street'])) > 128)) {
+				$json['error']['street'] = $this->language->get('error_street');
 				$validationSucceeded = false;
 			}
 
