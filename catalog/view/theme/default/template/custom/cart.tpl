@@ -61,7 +61,7 @@
 			<a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_shopping_text; ?></a>
 		</div>
 		<div class="pull-right">
-			<a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout_text; ?></a>
+			<a href="<?php echo $checkout; ?>" class="btn btn-primary btn-black" style="font-size: 14px;"><?php echo $button_checkout_text; ?></a>
 		</div>
 	</div>
 	<?php } else {?>

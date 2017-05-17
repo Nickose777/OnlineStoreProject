@@ -105,9 +105,8 @@
         <?php } ?>
     	</div>
 
-			 <!-- <button type="button" id="confirm_order" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px;">Order</button><br>  -->
-        <button type="button" id="confirm_order" class="btn center-block btn  btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px; background: #303030; color: #ffffff;"><?php echo $text_order; ?></button>
-      <br>  
+        <button type="button" id="confirm_order" class="btn center-block btn btn-lg btn-black"><?php echo $text_order; ?></button>
+      	<br>  
 
 			<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px"><?php echo $text_back; ?></button>	
 		</form>

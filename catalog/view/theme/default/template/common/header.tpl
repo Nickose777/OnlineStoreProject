@@ -33,6 +33,9 @@
 <!-- Payment -->
 <link href="catalog/view/theme/default/stylesheet/payment.css" rel="stylesheet" type="text/css" />
 
+<!-- btn-black -->
+<link href="catalog/view/theme/default/stylesheet/btn-black.css" rel="stylesheet" type="text/css" />
+
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 <?php foreach ($links as $link) { ?>
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />

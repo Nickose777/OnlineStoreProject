@@ -24,6 +24,6 @@
 
 	<img class="img-rounded center-block" src="/image/catalog/homeImage.png" alt="homeImage" style="max-height: 300px;"><br><br>
 
-	<a href="<?php echo $order_page; ?>" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px" role="button"><?php echo $text_order?></a>
+	<a href="<?php echo $order_page; ?>" class="btn btn-default center-block btn btn-success btn-lg btn-black" role="button"><?php echo $text_order?></a>
 </div>			
 <?php echo $footer; ?>
