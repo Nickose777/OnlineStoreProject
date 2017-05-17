@@ -106,10 +106,10 @@
     	</div>
 
 			 <!-- <button type="button" id="confirm_order" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px;">Order</button><br>  -->
-        <button type="button" id="confirm_order" class="btn center-block btn  btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px; background: #303030; color: #ffffff;">Order</button>
+        <button type="button" id="confirm_order" class="btn center-block btn  btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px; background: #303030; color: #ffffff;"><?php echo $text_order; ?></button>
       <br>  
 
-			<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px">Back</button>	
+			<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px"><?php echo $text_back; ?></button>	
 		</form>
     
     <div id="confirm_modal" class="modal fade" role="dialog">
@@ -121,8 +121,8 @@
             <h4 class="modal-title">Confirm order</h4>
           </div>
           <div class="modal-body">
-            <p>Fullname: <span id="fullname"></span></p>
-            <p>Email: <span id="email"></span></p>
+            <p>Full name: <span id="fullname"></span></p>
+            <p>E-Mail: <span id="email"></span></p>
             <p>Phone number: <span id="phonenumber"></span></p>
             <p>Country: <span id="country"></span></p>
             <p>Region: <span id="region"></span></p>

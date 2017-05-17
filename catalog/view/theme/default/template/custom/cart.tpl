@@ -66,7 +66,7 @@
 	</div>
 	<?php } else {?>
 	<div class="centered">
-    	<h2 class="h2">No products in the cart!</h2>
+    	<h2 class="h2"><?php echo $text_no_products; ?>!</h2>
 	</div>
 	<?php }?>
 </div>

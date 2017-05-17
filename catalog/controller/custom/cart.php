@@ -18,10 +18,11 @@ class ControllerCustomCart extends Controller {
 		$data['product_update_text'] = 'Update';
 		$data['product_remove_text'] = 'Remove';
 
-		$data['button_shopping_text'] = 'Continue Shopping';
-		$data['button_checkout_text'] = 'To Checkout';
+		$data['button_shopping_text'] = 'Weiter Shopping';
+		$data['button_checkout_text'] = 'Zum Checkout';
 
 		$data['total_sum_text'] = 'Total';
+		$data['text_no_products'] = "Sie haben noch keine Produkte bestellt";
 		/* TODO */
 
 		$data['footer'] = $this->load->controller('common/footer');

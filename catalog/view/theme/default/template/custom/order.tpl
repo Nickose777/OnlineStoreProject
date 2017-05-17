@@ -23,10 +23,10 @@
 					<div>
 						<h2 class="h2" style="margin-top: 0px;"><b><?php echo $product['name']; ?></b></h2>
 						<?php echo $product['description']; ?>
-						<h3 class="h3">Color: <?php echo $product['model']; ?></h3>
-						<h3 class="h3"><b>Price: <?php echo $product['price']; ?></b></h3>
+						<h3 class="h3"><?php echo $text_color; ?>: <?php echo $product['model']; ?></h3>
+						<h3 class="h3"><b><?php echo $text_price; ?>: <?php echo $product['price']; ?></b></h3>
 
-						<button onclick="cart.add('<?php echo $product['product_id']; ?>', getQuantity(<?php echo $index; ?>));" type="button" class="btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px">Order</button>
+						<button onclick="cart.add('<?php echo $product['product_id']; ?>', getQuantity(<?php echo $index; ?>));" type="button" class="btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px"><?php echo $text_order; ?></button>
 					</div>
 				</div>
 			</div>

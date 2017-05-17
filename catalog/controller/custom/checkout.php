@@ -10,22 +10,24 @@ class ControllerCustomCheckout extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-		$data['entry_firstname'] = "First name";
-		$data['entry_lastname'] = "Last name";
+		$data['entry_firstname'] = "Vorname";
+		$data['entry_lastname'] = "Nachname";
 		$data['entry_email'] = "E-Mail";
-		$data['entry_telephone'] = "Phone number";
-		$data['entry_company'] = "Company";
-		$data['entry_street'] = "Street";
-		$data['entry_house'] = "House";
-		$data['entry_city'] = "City";
-		$data['entry_postcode'] = "Postcode";
-		$data['entry_country'] = "Country";
-		$data['entry_zone'] = "Region";
+		$data['entry_telephone'] = "Telefonnummer";
+		$data['entry_company'] = "Firma";
+		$data['entry_street'] = "Stra&szlig;e";
+		$data['entry_house'] = "Hausnummer";
+		$data['entry_city'] = "Stadt";
+		$data['entry_postcode'] = "PLZ";
+		$data['entry_country'] = "Land";
+		$data['entry_zone'] = "Bezirk";
 
-		$data['text_payment_method'] = "Payment method";
+		$data['text_payment_method'] = "Bezahlverfahren";
+		$data['text_order'] = "Bestellen";
+		$data['text_back'] = "Zur&uuml;ck";
 
-		$data['text_select'] = "Select";
-		$data['text_none'] = "None";
+		$data['text_select'] = "W&auml;hlen";
+		$data['text_none'] = "Nicht ausgew &auml;hlt";
 
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
