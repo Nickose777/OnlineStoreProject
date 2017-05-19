@@ -17,6 +17,10 @@ class ControllerCustomOrder extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
+		$data['text_color'] = "Farbe";
+		$data['text_price'] = "Preis";
+		$data['text_order'] = "Bestellen";
+
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);

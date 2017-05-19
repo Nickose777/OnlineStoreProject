@@ -20,6 +20,10 @@ class ControllerCommonFooter extends Controller {
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
+		$data['text_address'] = "Adresse";
+		$data['text_email'] = "E-Mail";
+		$data['text_telephone'] = "Telefonnummer";
+
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();

@@ -19,6 +19,8 @@ class ControllerCustomHome extends Controller {
 			$data['logo'] = '';
 		}
 
+		$data['text_order'] = "Bestellen";
+
 		$data['order_page'] = $this->url->link('custom/order');
 		$data['name'] = 'Logo';
 

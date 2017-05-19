@@ -61,12 +61,12 @@
 			<a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_shopping_text; ?></a>
 		</div>
 		<div class="pull-right">
-			<a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout_text; ?></a>
+			<a href="<?php echo $checkout; ?>" class="btn btn-primary btn-black" style="font-size: 14px;"><?php echo $button_checkout_text; ?></a>
 		</div>
 	</div>
 	<?php } else {?>
 	<div class="centered">
-    	<h2 class="h2">No products in the cart!</h2>
+    	<h2 class="h2"><?php echo $text_no_products; ?>!</h2>
 	</div>
 	<?php }?>
 </div>

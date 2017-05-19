@@ -33,6 +33,9 @@
 <!-- Payment -->
 <link href="catalog/view/theme/default/stylesheet/payment.css" rel="stylesheet" type="text/css" />
 
+<!-- btn-black -->
+<link href="catalog/view/theme/default/stylesheet/btn-black.css" rel="stylesheet" type="text/css" />
+
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 <?php foreach ($links as $link) { ?>
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
@@ -47,36 +50,16 @@
 <body class="<?php echo $class; ?>">
 <nav id="top">
   <div class="container">
-    <?php echo $currency; ?>
-    <?php echo $language; ?>
-
     <div id="top-links" class="nav pull-left">
       <ul class="list-inline">
-    <li><a href="<?php echo $home; ?>" title="Home"><i class="fa fa-home"></i> <span class="hidden-xs hidden-sm hidden-md">Home</span></a></li> <!-- !!! UI and icon for this link -->
-    <li><a href="http://onlinestoreproject:81/index.php?route=custom/order" title="Product"> <span class="hidden-xs hidden-sm hidden-md">Products</span></a></li> <!-- TODO link to products page -->
+    <li><a href="<?php echo $home; ?>" title="Home"><i class="fa fa-home"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_home; ?></span></a></li>
+    <li><a href="http://onlinestoreproject:81/index.php?route=custom/order" title="Product"> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_products; ?></span></a></li>
       </ul>
     </div>
     
 
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
-      <li><i class="fa fa-globe"></i> <span class="hidden-xs hidden-sm hidden-md">Change language</span></a></li><!--!!!!! TODO Choice of languages -->
-        <!-- <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li> -->
-        <!-- <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <?php if ($logged) { ?>
-            <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-            <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-            <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-            <?php } else { ?>
-            <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-            <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-            <?php } ?>
-          </ul>
-        </li> -->
-        <!-- <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li> -->
         <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a></li>
         <li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
       </ul>

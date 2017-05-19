@@ -10,22 +10,24 @@ class ControllerCustomCheckout extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
-		$data['entry_firstname'] = "First name";
-		$data['entry_lastname'] = "Last name";
+		$data['entry_firstname'] = "Vorname";
+		$data['entry_lastname'] = "Nachname";
 		$data['entry_email'] = "E-Mail";
-		$data['entry_telephone'] = "Phone number";
-		$data['entry_company'] = "Company";
-		$data['entry_street'] = "Street";
-		$data['entry_house'] = "House";
-		$data['entry_city'] = "City";
-		$data['entry_postcode'] = "Postcode";
-		$data['entry_country'] = "Country";
-		$data['entry_zone'] = "Region";
+		$data['entry_telephone'] = "Telefonnummer";
+		$data['entry_company'] = "Firma";
+		$data['entry_street'] = "Stra&szlig;e";
+		$data['entry_house'] = "Hausnummer";
+		$data['entry_city'] = "Stadt";
+		$data['entry_postcode'] = "PLZ";
+		$data['entry_country'] = "Land";
+		$data['entry_zone'] = "Bezirk";
 
-		$data['text_payment_method'] = "Payment method";
+		$data['text_payment_method'] = "Bezahlverfahren";
+		$data['text_order'] = "Bestellen";
+		$data['text_back'] = "Zur&uuml;ck";
 
-		$data['text_select'] = "Select";
-		$data['text_none'] = "None";
+		$data['text_select'] = "W&auml;hlen";
+		$data['text_none'] = "Nicht ausgew &auml;hlt";
 
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
@@ -235,8 +237,13 @@ class ControllerCustomCheckout extends Controller {
 				$validationSucceeded = false;
 			}
 
-			if ((utf8_strlen(trim($this->request->post['street'])) < 3) || (utf8_strlen(trim($this->request->post['street'])) > 128) || (utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
-				$json['error']['address_1'] = $this->language->get('error_address_1');
+			if ((utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
+				$json['error']['house'] = $this->language->get('error_house');
+				$validationSucceeded = false;
+			}
+
+			if ((utf8_strlen(trim($this->request->post['street'])) < 3) || (utf8_strlen(trim($this->request->post['street'])) > 128)) {
+				$json['error']['street'] = $this->language->get('error_street');
 				$validationSucceeded = false;
 			}
 
@@ -598,6 +605,9 @@ class ControllerCustomCheckout extends Controller {
             $json['street'] = $this->request->post['street'];
             $json['house'] = $this->request->post['house'];
             $json['postcode'] = $this->request->post['postcode'];
+            if (strlen($this->request->post['company']) > 0) {
+            	$json['company'] = $this->request->post['company'];
+            }
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
