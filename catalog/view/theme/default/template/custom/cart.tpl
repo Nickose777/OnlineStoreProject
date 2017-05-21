@@ -58,10 +58,10 @@
 
 	<div class="buttons clearfix">
 		<div class="pull-left">
-			<a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_shopping_text; ?></a>
+			<a href="<?php echo $continue; ?>" class="btn-black"><?php echo $button_shopping_text; ?></a>
 		</div>
 		<div class="pull-right">
-			<a href="<?php echo $checkout; ?>" class="btn btn-primary btn-black" style="font-size: 14px;"><?php echo $button_checkout_text; ?></a>
+			<a href="<?php echo $checkout; ?>" class="btn-black"><?php echo $button_checkout_text; ?></a>
 		</div>
 	</div>
 	<?php } else {?>

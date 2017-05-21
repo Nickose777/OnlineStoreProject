@@ -26,7 +26,7 @@
 						<h3 class="h3"><?php echo $text_color; ?>: <?php echo $product['model']; ?></h3>
 						<h3 class="h3"><b><?php echo $text_price; ?>: <?php echo $product['price']; ?></b></h3>
 
-						<button onclick="cart.add('<?php echo $product['product_id']; ?>', getQuantity(<?php echo $index; ?>));" type="button" class="btn btn-success btn-lg btn-black"><?php echo $text_order; ?></button>
+						<button onclick="cart.add('<?php echo $product['product_id']; ?>', getQuantity(<?php echo $index; ?>));" type="button" class="btn-black"><?php echo $text_order; ?></button>
 					</div>
 				</div>
 			</div>
