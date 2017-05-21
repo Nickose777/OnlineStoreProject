@@ -51,12 +51,9 @@
       <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
         <select name="country_id" id="input-payment-country" class="form-control">
-          <option value=""><?php echo $text_select; ?></option>
           <?php foreach ($countries as $country) { ?>
           <?php if ($country['country_id'] == $country_id) { ?>
           <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
-          <?php } else { ?>
-          <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
           <?php } ?>
           <?php } ?>
         </select>
@@ -77,7 +74,7 @@
       </div>
       </div>
       <div class="row">
-      <div class="form-group required col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
         <input type="text" name="telephone" placeholder="<?php echo $entry_telephone; ?>" value="<?php echo $telephone; ?>" id="input-payment-telephone" class="form-control" />
       </div>
@@ -117,25 +114,26 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Confirm order</h4>
+            <h4 class="modal-title">Bestellbest&auml;tigung</h4>
           </div>
           <div class="modal-body">
-            <p>Full name: <span id="fullname"></span></p>
-            <p>E-Mail: <span id="email"></span></p>
-            <p>Phone number: <span id="phonenumber"></span></p>
-            <p>Country: <span id="country"></span></p>
-            <p>Region: <span id="region"></span></p>
-            <p>Street: <span id="street"></span></p>
-            <p>House: <span id="house"></span></p>
-            <p>Postcode: <span id="postcode"></span></p>
-            <p>Company: <span id="company"></span></p>
+            <p>Name: <span id="fullname"></span></p>
+            <p><?php echo $entry_email; ?>: <span id="email"></span></p>
+            <p><?php echo $entry_telephone; ?>: <span id="phonenumber"></span></p>
+            <p><?php echo $entry_country; ?>: <span id="country"></span></p>
+            <p><?php echo $entry_zone; ?>: <span id="region"></span></p>
+            <p><?php echo $entry_street; ?>: <span id="street"></span></p>
+            <p><?php echo $entry_house; ?>: <span id="house"></span></p>
+            <p><?php echo $entry_postcode; ?>: <span id="postcode"></span></p>
+            <p><?php echo $entry_company; ?>: <span id="company"></span></p>
+            <p><?php echo $text_total; ?>: <span id="total"></span></p>
             <hr>
-            <p>Press button to confirm your order</p>
+            <p>Dr&uuml;cken Sie die Taste, um Ihre Bestellung zu best&auml;tigen</p>
           </div>
           <div class="modal-footer">
             <div id="payment-content" class="pull-left"></div>
             <div class="buttons">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Zur&uuml;ck</button>
             </div>
           </div>
         </div>
@@ -225,14 +223,18 @@ $('select[name=\'country_id\']').trigger('change');
               else {
                 $('#confirm_modal .modal-body #fullname').html(json['fullname']);
                 $('#confirm_modal .modal-body #email').html(json['email']);
-                $('#confirm_modal .modal-body #phonenumber').html(json['phonenumber']);
                 $('#confirm_modal .modal-body #country').html(json['country']);
                 $('#confirm_modal .modal-body #region').html(json['region']);
                 $('#confirm_modal .modal-body #street').html(json['street']);
                 $('#confirm_modal .modal-body #house').html(json['house']);
                 $('#confirm_modal .modal-body #postcode').html(json['postcode']);
-                var company = json['company'] !== undefined ? json['company'] : "No company";
+                $('#confirm_modal .modal-body #total').html(json['total']);
+
+                var text_not_entered = <?php echo json_encode($text_not_entered); ?>;
+                var company = json['company'] !== undefined ? json['company'] : text_not_entered;
                 $('#confirm_modal .modal-body #company').html(company);
+                var phonenumber = json['phonenumber'] !== undefined ? json['phonenumber'] : text_not_entered;
+                $('#confirm_modal .modal-body #phonenumber').html(phonenumber);
 
                 $('#confirm_modal #payment-content').html(json['payment_html']);
                 $('#confirm_modal').modal('show');

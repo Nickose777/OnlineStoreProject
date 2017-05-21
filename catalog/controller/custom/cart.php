@@ -8,12 +8,12 @@ class ControllerCustomCart extends Controller {
 		$this->load->language('custom/cart');
 
 		/* TODO move to language file*/
-		$data['product_image_column'] = 'Image';
-		$data['product_product_column'] = 'Product';
-		$data['product_model_column'] = 'Model';
-		$data['product_quantity_column'] = 'Quantity';
-		$data['product_unit_column'] = 'Unit Price';
-		$data['product_total_column'] = 'Total Price';
+		$data['product_image_column'] = 'Bild';
+		$data['product_product_column'] = 'Produkt';
+		$data['product_model_column'] = 'Modell';
+		$data['product_quantity_column'] = 'Anzahl';
+		$data['product_unit_column'] = 'Einzelpreis';
+		$data['product_total_column'] = 'Gesamt';
 
 		$data['product_update_text'] = 'Update';
 		$data['product_remove_text'] = 'Remove';
@@ -21,7 +21,7 @@ class ControllerCustomCart extends Controller {
 		$data['button_shopping_text'] = 'Weiter Shopping';
 		$data['button_checkout_text'] = 'Zum Checkout';
 
-		$data['total_sum_text'] = 'Total';
+		$data['total_sum_text'] = 'Gesamt';
 		$data['text_no_products'] = "Sie haben noch keine Produkte bestellt";
 		/* TODO */
 
