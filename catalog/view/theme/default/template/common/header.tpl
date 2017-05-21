@@ -53,7 +53,7 @@
     <div id="top-links" class="nav pull-left">
       <ul class="list-inline">
     <li><a href="<?php echo $home; ?>" title="Home"><i class="fa fa-home"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_home; ?></span></a></li>
-    <li><a href="http://onlinestoreproject:81/index.php?route=custom/order" title="Product"> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_products; ?></span></a></li>
+    <li><a href="http://onlinestoreproject/index.php?route=custom/order" title="Product"> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_products; ?></span></a></li>
       </ul>
     </div>
     
