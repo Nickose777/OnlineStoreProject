@@ -1,57 +1,117 @@
-.gallery_container{
-	margin: 4% auto;
-	width: 210px;
-	height: 140px;
-	margin-bottom: 150px;
-	position: relative;
-	perspective: 1000px;
-}
-#carousel{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
-	animation: rotation 30s infinite linear;
-}
-#carousel:hover{
-	animation-play-state: paused;
-}
-#carousel figure{
-	display: block;
-	position: absolute;
-	width: 90%;
-	height: 50%px;
-	left: 10px;
-	top: 10px;
-	background: black;
-	overflow: hidden;
-	border: solid 5px black;
-}
-#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
-#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
-#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
-#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
-#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
-#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
-#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
-#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+      *{        
+        padding:0;
+        margin:0;
+        list-style-type:none;
+      }
+      #slider{
+        background-image:url('/image/resources/background.png');
+        width:960px;
+        height:370px;
+        margin:50px auto;
+        position:relative;
+      }
+      #mask{
+        width:100%;
+        height:100%;
+        position:absolute;
+        overflow:hidden;
+      }
+      .fleche{
+        position:absolute;
+        top:145px;
+        cursor:pointer;
+      }
+      #fleche_gauche{
+        left:-17px;
+      }
+      #fleche_droite{
+        right: -17px;
+      }
+      #image_container{
+        position:absolute;
+        width:400%;
+        height:100%;
+        /* La transition sur tout les navigateurs */
+           /* Chrome */ 
+          -webkit-transition-property:all;
+          -webkit-transition-duration:1s;
 
-.gallery_img{
-	-webkit-filter: grayscale(1);
-	cursor: pointer;
-	transition: all .5s ease;
-}
-.gallery_img:hover{
-	-webkit-filter: grayscale(0);
-  transform: scale(1.2,1.2);
-}
+           /* Firefox */ 
+          -moz-transition-property:all;
+          -moz-transition-duration:1s;
+          
+           /* Opera */ 
+          transition-property:all;
+          transition-duration:1s;
 
-@keyframes rotation{
-	from{
-		transform: rotateY(0deg);
-	}
-	to{
-		transform: rotateY(360deg);
-	}
-}
+      }
+      
+      /* Les différentes positions du slider */
+      .image1 #image_container{
+        left:0;
+      }
+      .image2 #image_container{
+        left:-100%;
+      }
+      .image3 #image_container{
+        left:-200%;
+      }
+      .image4 #image_container{
+        left:-300%;
+      }
+      
+      /* Les images */
+      #image_container li{
+        float:left;
+      }
+      
+      /* L'encart Bleu */
+     /* #encart{
+        position:absolute;
+        top:-15px;
+        left:200px;
+        background-image: url('/image/resources/text.png');
+        width:328px;
+        height:396px;
+      }*/
+      
+     /* #bouton{
+        position:relative;
+        width:244px;
+        height:55px;
+        margin: 300px 0px 0px 40px;
+        cursor:pointer;
+      }*/
+      
+      /* Les points de navigation */
+      #dots{
+        width:130px;
+        margin:auto;
+      }
+      
+      /* les points, avec leur background non selectionné */
+      #dots li{
+        float:left;
+        margin: 0px 2px;
+
+        width:12px;
+        height:12px;
+        background-image: url('/image/resources/empty-dot.png');
+        cursor:pointer;
+      }
+      /* Point au survol */
+      #dots li:hover{
+        background-image: url('/image/resources/selected-dot.png');
+      }
+      
+      /* Point "selectionné". De la même manière que l'image, on change en fonction de la classe de slider */
+      .image1 #dots li.button1, .image2 #dots li.button2, .image3 #dots li.button3, .image4 #dots li.button4{
+        background-image: url('/image/resources/selected-dot.png');
+      }
+
+      /* Un eyecandy */
+      #glass{
+        position:absolute;
+        top:0px;
+        left:0px;
+      }

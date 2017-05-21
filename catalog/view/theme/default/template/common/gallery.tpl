@@ -1,13 +1,22 @@
-<div class="gallery_container">
-	<div id="carousel">
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/13a.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/1.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/2.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/3.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/4.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/5.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/6.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/7a.png" alt=""></figure>
-		<figure><img class=" gallery_img" src= "/image/catalog/demo/banners/8a.png" alt=""></figure>
+<div id="slider">
+	<div id="mask">
+		<ul id="image_container">
+			<li><img src="/image/images/bird.jpg"></li>
+			<li><img src="/image/images/red_bird.jpg"></li>
+			<li><img src="/image/images/spring.jpg"></li>
+			<li><img src="/image/images/winter.jpg"></li>
+		</ul>
 	</div>
+	<img src="/image/resources/glass.png" id="glass">
+	<div id="encart">
+		<img src="/image/resources/bouton.png" id="bouton">
+		<ul id="dots">
+			<li class="button1" onclick="changeImage(1)" ></li>
+			<li class="button2" onclick="changeImage(2)" ></li>
+			<li class="button3" onclick="changeImage(3)" ></li>
+			<li class="button4" onclick="changeImage(4)" ></li>
+		</ul>
+	</div>
+	<img src="/image/resources/fleche-gauche.png" id="fleche_gauche" class="fleche" onclick="prevImage()" >
+	<img src="/image/resources/fleche-droite.png" id="fleche_droite" class="fleche" onclick="nextImage()" >
 </div>

@@ -15,4 +15,5 @@
       </div>
   </div>
 </footer>
+<script src="catalog/view/javascript/jquery/gallery.js" type="text/javascript"></script>
 </body></html>
