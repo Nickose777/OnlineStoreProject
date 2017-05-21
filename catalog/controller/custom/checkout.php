@@ -23,11 +23,13 @@ class ControllerCustomCheckout extends Controller {
 		$data['entry_zone'] = "Bezirk";
 
 		$data['text_payment_method'] = "Bezahlverfahren";
+		$data['text_total'] = "Gesamt";
 		$data['text_order'] = "Bestellen";
 		$data['text_back'] = "Zur&uuml;ck";
 
 		$data['text_select'] = "W&auml;hlen";
 		$data['text_none'] = "Nicht ausgew &auml;hlt";
+		$data['text_not_entered'] = "Nicht eingegeben";
 
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
@@ -232,10 +234,10 @@ class ControllerCustomCheckout extends Controller {
 				$validationSucceeded = false;
 			}
 
-			if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
-				$json['error']['telephone'] = $this->language->get('error_telephone');
-				$validationSucceeded = false;
-			}
+			// if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+			// 	$json['error']['telephone'] = $this->language->get('error_telephone');
+			// 	$validationSucceeded = false;
+			// }
 
 			if ((utf8_strlen(trim($this->request->post['house'])) < 1) || (utf8_strlen(trim($this->request->post['house'])) > 6)) {
 				$json['error']['house'] = $this->language->get('error_house');
@@ -599,15 +601,25 @@ class ControllerCustomCheckout extends Controller {
 
             $json['fullname'] = $this->request->post['firstname'] . " " . $this->request->post['lastname'];
             $json['email'] = $this->request->post['email'];
-            $json['phonenumber'] = $this->request->post['telephone'];
             $json['country'] = $country_info['name'];
             $json['region'] = $zone_info['name'];
             $json['street'] = $this->request->post['street'];
             $json['house'] = $this->request->post['house'];
             $json['postcode'] = $this->request->post['postcode'];
+
+            if (strlen($this->request->post['telephone']) > 0) {
+            	$json['telephone'] = $this->request->post['telephone'];
+            }
             if (strlen($this->request->post['company']) > 0) {
             	$json['company'] = $this->request->post['company'];
             }
+
+            $total = 0;
+			foreach ($this->cart->getProducts() as $product) {
+				$total += $product['price'] * $product['quantity'];
+			}
+
+			$json['total'] = $this->currency->format($total, $this->session->data['currency']);
 		}
 
 		$this->response->addHeader('Content-Type: application/json');

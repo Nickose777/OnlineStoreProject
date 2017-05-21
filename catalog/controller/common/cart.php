@@ -47,8 +47,8 @@ class ControllerCommonCart extends Controller {
 			array_multisort($sort_order, SORT_ASC, $totals);
 		}
 
-		$data['text_empty'] = $this->language->get('text_empty');
-		$data['text_cart'] = $this->language->get('text_cart');
+		$data['text_empty'] = "Sie haben noch keine Produkte bestellt!";//$this->language->get('text_empty');
+		$data['text_cart'] = "Cart zeigen";//$this->language->get('text_cart');
 		$data['text_checkout'] = $this->language->get('text_checkout');
 		$data['text_recurring'] = $this->language->get('text_recurring');
 		//$data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
@@ -131,12 +131,23 @@ class ControllerCommonCart extends Controller {
 
 		$data['totals'] = array();
 
+		//Only total needed
+		$i = 0;
 		foreach ($totals as $total) {
-			$data['totals'][] = array(
-				'title' => $total['title'],
-				'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
-			);
+			if ($i == 1) {
+				$data['totals'][] = array(
+					'title' => "Gesamt",
+					'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
+				);
+			}
+			$i++;
 		}
+		// foreach ($totals as $total) {
+		// 	$data['totals'][] = array(
+		// 		'title' => $total['title'],
+		// 		'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
+		// 	);
+		// }
 
 		$data['cart'] = $this->url->link('custom/cart');
 		$data['checkout'] = $this->url->link('custom/checkout', '', true);
