@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col-md-3 text-center">
 					<img class="img-rounded" src="<?php echo $product['thumb']; ?>" alt="Image" style=" max-height: 300px; ">
-			        <div class="input-group container" style="max-width: 50px; margin-top: 15px;">
+			        <div class="input-group container" style="max-width: 50px; margin-top: 15px; margin-bottom: 15px;">
 			            <span class="input-group-btn">
 			                <button onclick="decrease(<?php echo $index; ?>);" type="button" class="quantity-left-minus btn btn-number" data-type="minus" data-field="">
 			                	<span class="glyphicon glyphicon-minus"></span>

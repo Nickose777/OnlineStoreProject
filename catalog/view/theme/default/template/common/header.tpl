@@ -66,7 +66,7 @@
     </div>
   </div>
 </nav>
-<header>
+<header style="margin-bottom: 40px;">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
