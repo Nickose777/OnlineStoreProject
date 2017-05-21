@@ -69,10 +69,9 @@
 <header style="margin-bottom: 40px;">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-      </div>
-      </div>
-      <div class="col-sm-3 pull-right"><?php echo $cart; ?></div>
+      <div class="col-sm-4"></div>
     </div>
+      <!-- <div class="col-sm-3 pull-right"></div> -->
+    <?php echo $cart; ?>
   </div>
 </header>
