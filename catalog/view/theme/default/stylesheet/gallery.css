@@ -31,7 +31,6 @@
         position:absolute;
         width:400%;
         height:100%;
-        /* La transition sur tout les navigateurs */
            /* Chrome */ 
           -webkit-transition-property:all;
           -webkit-transition-duration:1s;
@@ -45,8 +44,7 @@
           transition-duration:1s;
 
       }
-      
-      /* Les différentes positions du slider */
+  
       .image1 #image_container{
         left:0;
       }
@@ -60,7 +58,6 @@
         left:-300%;
       }
       
-      /* Les images */
       #image_container li{
         float:left;
       }
@@ -82,14 +79,12 @@
         margin: 300px 0px 0px 40px;
         cursor:pointer;
       }*/
-      
-      /* Les points de navigation */
+
       #dots{
         width:130px;
         margin:auto;
       }
-      
-      /* les points, avec leur background non selectionné */
+
       #dots li{
         float:left;
         margin: 0px 2px;
@@ -99,17 +94,15 @@
         background-image: url('/image/resources/empty-dot.png');
         cursor:pointer;
       }
-      /* Point au survol */
+
       #dots li:hover{
         background-image: url('/image/resources/selected-dot.png');
       }
-      
-      /* Point "selectionné". De la même manière que l'image, on change en fonction de la classe de slider */
+  
       .image1 #dots li.button1, .image2 #dots li.button2, .image3 #dots li.button3, .image4 #dots li.button4{
         background-image: url('/image/resources/selected-dot.png');
       }
 
-      /* Un eyecandy */
       #glass{
         position:absolute;
         top:0px;

@@ -133,7 +133,7 @@
           <div class="modal-footer">
             <div id="payment-content" class="pull-left"></div>
             <div class="buttons">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Zur&uuml;ck</button>
+              <button type="button" class="btn-grey" data-dismiss="modal">Zur&uuml;ck</button>
             </div>
           </div>
         </div>

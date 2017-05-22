@@ -1,6 +1,6 @@
 <div class="buttons">
   <div class="payment-container">
-    <input type="button" class="btn" value="<?php echo $button_confirm; ?>" id="button-confirm" data-loading-text="<?php echo $text_loading; ?>" />
+    <input type="button" class="btn-black" value="<?php echo $button_confirm; ?>" id="button-confirm" data-loading-text="<?php echo $text_loading; ?>" />
   </div>
 </div>
 <script type="text/javascript"><!--
