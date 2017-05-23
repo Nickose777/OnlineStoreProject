@@ -42,3 +42,14 @@
   color: #ffffff;
   text-decoration: none;
 }
+
+@media screen and (max-width: 480px) {
+    .btn-black {
+      font-size: 14px;
+      width: 100px; 
+    }
+    .btn-grey {
+      font-size: 14px;
+      width: 100px; 
+    }
+}
