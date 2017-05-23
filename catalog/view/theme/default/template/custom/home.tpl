@@ -13,7 +13,6 @@
 	</div>
 
 	<?php echo $gallery; ?>
-	<!-- <img class="img-rounded center-block" src="/image/catalog/demo/banners/gallery.png" alt="gallery" style="max-height: 600px;"><br><br> -->
 
 	<p class="text-center" style="font-size: 20px; font-weight: bold;">Обеспечивает идеальную посадку.</p>
 	<p class="text-center" style="font-size: 20px; font-weight: bold;">Эти высококачественные изделия хорошо впишутся в гардероб мужчины любого возраста.</p>
@@ -27,7 +26,7 @@
 
 	<img class="img-rounded center-block" src="/image/catalog/homeImage.png" alt="homeImage" style="max-height: 300px;"><br><br>
 
-	<a href="<?php echo $order_page; ?>" class="btn-black center-block" role="button">Order</a>
+	<a href="<?php echo $order_page; ?>" class="btn-black center-block" role="button"><?php echo $text_order; ?></a>
 </div>	
 
 <?php echo $footer; ?>

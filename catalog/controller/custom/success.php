@@ -34,8 +34,8 @@ class ControllerCustomSuccess extends Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$data['heading_title'] = $this->language->get('heading_title');
-		$data['button_continue'] = $this->language->get('button_continue');
+		$data['heading_title'] = "Danke f&uuml;r Ihre Bestellung!";//$this->language->get('heading_title');
+		$data['button_continue'] = "Zur Home Seite";//$this->language->get('button_continue');
 
 		$data['continue'] = $this->url->link('custom/home');
 

@@ -10,6 +10,8 @@ class ControllerCustomCheckout extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
+		$data['url_back'] = $this->url->link('custom/cart');
+
 		$data['entry_firstname'] = "Vorname";
 		$data['entry_lastname'] = "Nachname";
 		$data['entry_email'] = "E-Mail";

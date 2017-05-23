@@ -105,7 +105,7 @@
         <button type="button" id="confirm_order" class="center-block btn-black"><?php echo $text_order; ?></button>
       	<br>  
 
-			<button type="button" class="btn-grey center-block"><?php echo $text_back; ?></button>	
+			<a href="<?php echo $url_back; ?>" class="btn-grey center-block"><?php echo $text_back; ?></a>	
 		</form>
     
     <div id="confirm_modal" class="modal fade" role="dialog">
