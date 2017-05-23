@@ -11,7 +11,7 @@
 		</h1>
 		<?php } ?>
 	</div>
-	
+
 	<?php echo $gallery; ?>
 	<!-- <img class="img-rounded center-block" src="/image/catalog/demo/banners/gallery.png" alt="gallery" style="max-height: 600px;"><br><br> -->
 
@@ -27,7 +27,7 @@
 
 	<img class="img-rounded center-block" src="/image/catalog/homeImage.png" alt="homeImage" style="max-height: 300px;"><br><br>
 
-	<a href="<?php echo $order_page; ?>" class="btn btn-default center-block btn btn-success btn-lg" style="font-size: 20px; width: 150px; border-radius: 15px" role="button">Order</a>
+	<a href="<?php echo $order_page; ?>" class="btn-black center-block" role="button">Order</a>
 </div>	
 
 <?php echo $footer; ?>

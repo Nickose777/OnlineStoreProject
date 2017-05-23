@@ -9,14 +9,13 @@
 	</div>
 	<img src="/image/resources/glass.png" id="glass">
 	<div id="encart">
-		<img src="/image/resources/bouton.png" id="bouton">
 		<ul id="dots">
 			<li class="button1" onclick="changeImage(1)" ></li>
 			<li class="button2" onclick="changeImage(2)" ></li>
 			<li class="button3" onclick="changeImage(3)" ></li>
 			<li class="button4" onclick="changeImage(4)" ></li>
 		</ul>
-	</div>
-	<img src="/image/resources/fleche-gauche.png" id="fleche_gauche" class="fleche" onclick="prevImage()" >
-	<img src="/image/resources/fleche-droite.png" id="fleche_droite" class="fleche" onclick="nextImage()" >
+	</div><!-- 
+	 <img src="/image/resources/fleche-gauche.png" id="fleche_gauche" class="fleche" onclick="prevImage()" >
+	 <img src="/image/resources/fleche-droite.png" id="fleche_droite" class="fleche" onclick="nextImage()" >  -->
 </div>

@@ -47,7 +47,7 @@
   <input type="hidden" name="bn" value="OpenCart_2.0_WPS" />
   <div class="buttons">
     <div class="payment-container">
-      <input type="submit" class="btn btn-success" value="<?php echo $button_confirm; ?>"/>
+      <input type="submit" class="btn-black" value="<?php echo $button_confirm; ?>"/>
     </div>
   </div>
 </form>

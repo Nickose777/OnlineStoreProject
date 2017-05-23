@@ -102,10 +102,10 @@
         <?php } ?>
     	</div>
 
-        <button type="button" id="confirm_order" class="btn center-block btn btn-lg btn-black"><?php echo $text_order; ?></button>
+        <button type="button" id="confirm_order" class="center-block btn-black"><?php echo $text_order; ?></button>
       	<br>  
 
-			<button type="button" class="btn btn-default center-block" style="font-size: 20px; width: 150px; border-radius: 15px"><?php echo $text_back; ?></button>	
+			<button type="button" class="btn-grey center-block"><?php echo $text_back; ?></button>	
 		</form>
     
     <div id="confirm_modal" class="modal fade" role="dialog">
@@ -133,7 +133,7 @@
           <div class="modal-footer">
             <div id="payment-content" class="pull-left"></div>
             <div class="buttons">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Zur&uuml;ck</button>
+              <button type="button" class="btn-grey" data-dismiss="modal">Zur&uuml;ck</button>
             </div>
           </div>
         </div>
