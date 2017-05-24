@@ -18,7 +18,7 @@
 					<?php foreach ($products as $product) { ?>
 					<tr>
 						<td class="text-center"><?php if ($product['thumb']) { ?>
-							<a href="#"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a>
+							<img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" />
 							<?php } ?>
 						</td>
 						<td class="text-left"><?php echo $product['name']; ?>
