@@ -22,7 +22,7 @@
 				<div class="col-md-9">
 					<div>
 						<h2 class="h2" style="margin-top: 0px;"><b><?php echo $product['name']; ?></b></h2>
-						<?php echo $product['description']; ?>
+						<p><?php echo $product['description']; ?></p>
 						<h3 class="h3"><?php echo $text_color; ?>: <?php echo $product['model']; ?></h3>
 						<h3 class="h3"><b><?php echo $text_price; ?>: <?php echo $product['price']; ?></b></h3>
 

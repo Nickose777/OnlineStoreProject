@@ -10,7 +10,7 @@ body {
 	font-size: 12px;
 	line-height: 20px;
 	width: 100%;
-    margin: 0 0 200px;
+    margin: 0 0 300px;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
@@ -766,4 +766,19 @@ h2.price {
 .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
     background-image: none;
     background-color: #df5c39;
+}
+
+/* Text on home page */
+.justified-text {
+	text-align: justify;
+}
+.slogan-text {
+	font-family: Agency FB;
+	font-size: 24px;
+	line-height: 44px;
+	text-align: center;
+}
+p {
+	font-size: 16px;
+	line-height: 30px;
 }

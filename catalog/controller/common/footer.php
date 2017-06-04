@@ -24,6 +24,10 @@ class ControllerCommonFooter extends Controller {
 		$data['text_email'] = "E-Mail";
 		$data['text_telephone'] = "Telefonnummer";
 
+		$data['product_back_page_text'] = "Widerrufsrecht";
+		$data['impressum_page_text'] = "Impressum";
+		$data['agb_page_text'] = "AGB";
+
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();
@@ -40,6 +44,10 @@ class ControllerCommonFooter extends Controller {
 		$data['address'] = $this->config->get('config_address');
 		$data['email'] = $this->config->get('config_email');
 		$data['telephone'] = $this->config->get('config_telephone');
+
+		$data['product_back_page'] = $this->url->link('custom/product_back', '', true);
+		$data['impressum_page'] = $this->url->link('custom/impressum', '', true);
+		$data['agb_page'] = $this->url->link('custom/agb', '', true);
 
 		$data['contact'] = $this->url->link('information/contact');
 		$data['return'] = $this->url->link('account/return/add', '', true);
