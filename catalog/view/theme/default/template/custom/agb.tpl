@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="container">
 	<h1 class="h1">Allgemeine Geschäftsbedingungen</h1>
-	<h3 class="h3">Vertragspartner</h3>
+	<h3 class="h3">1§ Vertragspartner</h3>
 	<p>Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und HemdSitzt</p>
 	<p>Einzelunternehmen</p>
 	<p>Vertreten durch Alexander, Schloh</p>
@@ -9,7 +9,7 @@
 	<p>EMailAdresse: schloh.alex@tonline.de</p>
 	<p>UmsatzsteuerIdentifikationsnummer: DE295106251, nachfolgend Anbieter genannt, der Vertrag zustande.</p>
 
-	<h3 class="h3">Vertragsgegenstand</h3>
+	<h3 class="h3">2§ Vertragsgegenstand</h3>
 	<p>
 		Durch diesen Vertrag wird der Verkauf von Neuwaren aus dem Bereich/den Bereichen Kleidung, Lifestyle, Outfit über
 		den OnlineShop
@@ -17,7 +17,7 @@
 		Produktbeschreibung der Angebotsseite verwiesen.
 	</p>
 
-	<h3 class="h3">Vertragsschluss</h3>
+	<h3 class="h3">3§ Vertragsschluss</h3>
 	<p>
 		Der Vertrag kommt im elektronischen Geschäftsverkehr über das ShopSystem
 		oder über andere
@@ -50,28 +50,28 @@
 		Zusendung der Ware oder Erbringung der Dienstleistung zustande.
 	</p>
 	
-	<h3 class="h3">Vertragsdauer</h3>
+	<h3 class="h3">4§ Vertragsdauer</h3>
 	<p>
 		Der Vertrag hat vorbehaltlich einer Kündigung eine Laufzeit von einer oder mehreren, von den Kunden gewünschten, Lieferungen. Der Gesamtpreis für die Leistungen im Vertragszeitraum beträgt 10 € oder mehr, abhängig von der bestellten Menge an Waren.
 		Der Gesamtpreis errechnet sich aus den folgenden Komponenten:
 		dem Produkt der Warenanzahl und des Preises der Ware, und den Versandt Kosten, falls vorhanden.
 	</p>
 	
-	<h3 class="h3">Vorbehalte</h3>
+	<h3 class="h3">5§ Vorbehalte</h3>
 	<p>
 		Der Anbieter behält sich vor, eine in Qualität und Preis gleichwertige Leistung zu erbringen. Die im Shop dargestellte
 		Leistung ist beispielhaft und nicht die individuelle, vertragsgegenständliche Leistung. Der Anbieter behält sich vor, im
 		Falle der Nichtverfügbarkeit der versprochenen Leistung diese nicht zu erbringen.
 	</p>
 	
-	<h3 class="h3">Preise, Versandkosten, Rücksendekosten</h3>
+	<h3 class="h3">6§ Preise, Versandkosten, Rücksendekosten</h3>
 	<p>
 		Alle Preise sind Endpreise und enthalten die gesetzliche Umsatzsteuer. Neben den Endpreisen fallen je nach
 		Versandart weitere Kosten an, die vor Versendung der Bestellung angezeigt werden. Besteht ein Widerrufsrecht und
 		wird von diesem Gebrauch gemacht, trägt der Kunde die Kosten der Rücksendung.
 	</p>
 	
-	<h3 class="h3">Zahlungsbedingungen</h3>
+	<h3 class="h3">7§ Zahlungsbedingungen</h3>
 	<p>
 		Der Kunde hat ausschließlich folgende Möglichkeiten zur Zahlung: Vorabüberweisung , Zahlungsdienstleister (PayPal) .
 		Weitere Zahlungsarten werden nicht angeboten und werden zurückgewiesen.
@@ -88,7 +88,7 @@
 		rechtskräftig festgestellt.
 	</p>
 	
-	<h3 class="h3">Lieferbedingungen</h3>
+	<h3 class="h3">8§ Lieferbedingungen</h3>
 	<p>
 		Die Ware wird umgehend nach bestätigtem Zahlungseingang versandt.
 		Der Versand erfolgt durchschnittlich spätestens nach 3 Tagen. Der Unternehmer verpflichtet sich zur Lieferung am 5.
@@ -103,7 +103,7 @@
 		informiert und empfangene Leistungen, insbesondere Zahlungen, zurückerstattet.
 	</p>
 	
-	<h3 class="h3">Gewährleistung</h3>
+	<h3 class="h3">9§ Gewährleistung</h3>
 	<p>
 		Ist der Kunde Unternehmer, wird für Neuwaren die Gewährleistungsfrist auf ein Jahr beschränkt.
 		Dem Anbieter wird zuerkannt, dass er bei einer Nacherfüllung selbst zwischen Reparatur oder Neulieferung wählen
@@ -115,7 +115,7 @@
 		gesetzlichen Regelungen.
 	</p>
 	
-	<h3 class="h3">Vertragsgestaltung</h3>
+	<h3 class="h3">10§ Vertragsgestaltung</h3>
 	<p>
 		Ist der Kunde Unternehmer, so geht die Gefahr des zufälligen Untergangs und/ oder der zufälligen Verschlechterung
 		der Ware mit der Übergabe, bei Versendung mit der Auslieferung der Ware an den ausgewählten Dienstleister hierfür
@@ -124,14 +124,14 @@
 		Der Kunde hat keine Möglichkeit selbst direkt auf den gespeicherten Vertragstext zuzugreifen.
 	</p>
 	
-	<h3 class="h3">Widerrufsrecht und Kundendienst</h3>
+	<h3 class="h3">11§ Widerrufsrecht und Kundendienst</h3>
 	<p>
 		Auf die Kunden, die Unternehmer sind, sind die Vorschriften für Fernabsatzverträge nicht anwendbar. Daher steht
 		diesen Kunden kein entsprechendes Widerrufsrecht wegen Fernabsatzvertrag zu. Der Anbieter räumt ein solches auch
 		nicht ein.
 	</p>
 	
-	<h3 class="h3">Haftungsausschluss</h3>
+	<h3 class="h3">12§ Haftungsausschluss</h3>
 	<p>
 		Schadensersatzansprüche des Kunden sind ausgeschlossen, soweit sich aus den nachfolgenden Gründen nicht etwas
 		anderes ergibt. Dies gilt auch für den Vertreter und Erfüllungsgehilfen des Anbieters, falls der Kunde gegen diese
@@ -142,16 +142,14 @@
 		Erfüllungsgehilfen.
 	</p>
 	
-	<h3 class="h3">Abtretungsund</h3>
-	
-	<h3 class="h3">Verpfändungsverbot</h3>
+	<h3 class="h3">13§ Verpfändungsverbot</h3>
 	<p>
 		Ansprüche oder Rechte des Kunden gegen den Anbieter dürfen ohne dessen Zustimmung nicht abgetreten oder
 		verpfändet werden, es sei denn der Kunde hat ein berechtigtes Interesse an der Abtretung oder Verpfändung
 		nachgewiesen.
 	</p>
 	
-	<h3 class="h3">Sprache, Gerichtsstand und anzuwendendes Recht</h3>
+	<h3 class="h3">14§ Sprache, Gerichtsstand und anzuwendendes Recht</h3>
 	<p>
 		Der Vertrag wird in Deutsch abgefasst. Die weitere Durchführung der Vertragsbeziehung erfolgt in Deutsch. Es findet
 		ausschließlich das Recht der Bundesrepublik Deutschland Anwendung. Für Verbraucher gilt dies nur insoweit, als
@@ -161,7 +159,7 @@
 		Sondervermögen sind, Sitz des Anbieters.
 	</p>
 	
-	<h3 class="h3">Datenschutz</h3>
+	<h3 class="h3">15§ Datenschutz</h3>
 	<p>
 		Im Zusammenhang mit der Anbahnung, Abschluss, Abwicklung und Rückabwicklung eines Kaufvertrages auf Grundlage
 		dieser AGB werden vom Anbieter Daten erhoben, gespeichert und verarbeitet. Dies geschieht im Rahmen der
@@ -188,13 +186,13 @@
 		015731341265 schloh.alex@tonline.de.
 	</p>
 	
-	<h3 class="h3">Salvatorische Klausel</h3>
+	<h3 class="h3">16§ Salvatorische Klausel</h3>
 	<p>
 		Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf die Wirksamkeit der sonstigen
 		Bestimmungen.
 	</p>
 	
-	<h3 class="h3">Umsetzung der ODRRichtlinie</h3>
+	<h3 class="h3">17§ Umsetzung der ODRRichtlinie</h3>
 	<p>
 		OnlineStreitbeilegung
 		gemäß Art. 14 Abs. 1 ODRVO
