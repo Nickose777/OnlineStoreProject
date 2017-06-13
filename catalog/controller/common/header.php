@@ -58,7 +58,7 @@ class ControllerCommonHeader extends Controller {
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
 		}
 
-		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
+		$data['text_shopping_cart'] = "Warenkorb";//$this->language->get('text_shopping_cart');
 		$data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account', '', true), $this->customer->getFirstName(), $this->url->link('account/logout', '', true));
 
 		$data['text_account'] = $this->language->get('text_account');
@@ -68,7 +68,7 @@ class ControllerCommonHeader extends Controller {
 		$data['text_transaction'] = $this->language->get('text_transaction');
 		$data['text_download'] = $this->language->get('text_download');
 		$data['text_logout'] = $this->language->get('text_logout');
-		$data['text_checkout'] = $this->language->get('text_checkout');
+		$data['text_checkout'] = "Bestellung abgeben";//$this->language->get('text_checkout');
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_all'] = $this->language->get('text_all');
 
