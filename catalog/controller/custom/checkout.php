@@ -21,8 +21,8 @@ class ControllerCustomCheckout extends Controller {
 		$data['entry_house'] = "Hausnummer";
 		$data['entry_city'] = "Stadt";
 		$data['entry_postcode'] = "PLZ";
-		$data['entry_country'] = "Land";
-		$data['entry_zone'] = "Bezirk";
+		$data['entry_country'] = "Staat";
+		$data['entry_zone'] = "Land";
 
 		$data['text_payment_method'] = "Bezahlverfahren";
 		$data['text_total'] = "Gesamt";

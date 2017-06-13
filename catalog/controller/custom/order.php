@@ -19,7 +19,7 @@ class ControllerCustomOrder extends Controller {
 
 		$data['text_color'] = "Farbe";
 		$data['text_price'] = "Preis";
-		$data['text_order'] = "Bestellen";
+		$data['text_order'] = "In den Warenkorb";
 
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
