@@ -34,7 +34,7 @@
 	<div class="container">
 		<p class="justified-text main-page-text">
 			Der „Hemd-Sitzt“ Träger ist eine sichere Lösung gegen das Herausstrecken ihres Hemdes im Laufe des ganzen Tages.<br> 
-			Unser Produkt besteht aus leichten elastischen Bändern, die sich an Ihren Oberschenkeln erstklassig/ideal/einwandfrei anpassen lassen, und aus speziellen Klammern, die sie am Rand Ihres Hemdes befestigen. Somit bleibt ihr Hemd immer Perfekt(можно что-то из верхних слов, а то много перфект)  eingesteckt. Außerdem verhindern unsere „Hemd-Sitzt" Träger das Bilden von Falten in den Rücken- und Schulterbereichen und garantieren somit einen ausgezeichneten Sitz Ihres Hemdes, unabhängig von Ihrer Körperposition.
+			Unser Produkt besteht aus leichten elastischen Bändern, die sich an Ihren Oberschenkeln einwandfrei anpassen lassen, und aus speziellen Klammern, die sie am Rand Ihres Hemdes befestigen. Somit bleibt ihr Hemd immer erstklassig  eingesteckt. Außerdem verhindern unsere „Hemd-Sitzt" Träger das Bilden von Falten in den Rücken- und Schulterbereichen und garantieren somit einen ausgezeichneten Sitz Ihres Hemdes, unabhängig von Ihrer Körperposition.
 		</p>
 	</div>
 
