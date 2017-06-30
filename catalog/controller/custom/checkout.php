@@ -11,6 +11,7 @@ class ControllerCustomCheckout extends Controller {
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
 		$data['url_back'] = $this->url->link('custom/cart');
+		$data['url_agb'] = $this->url->link('custom/agb');
 
 		$data['entry_firstname'] = "Vorname";
 		$data['entry_lastname'] = "Nachname";

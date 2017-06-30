@@ -1,6 +1,7 @@
 <?php echo $header; ?>
 <div class="container">
-	<h1 class="h1">Allgemeine Geschäftsbedingungen</h1>
+	<h3 class="h3">Allgemeine Geschäftsbedingungen</h3>
+	<hr>
 	<h3 class="h3">1§ Vertragspartner</h3>
 	<p>Auf Grundlage dieser Allgemeinen Geschäftsbedingungen (AGB) kommt zwischen dem Kunden und HemdSitzt</p>
 	<p>Einzelunternehmen</p>
