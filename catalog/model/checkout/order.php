@@ -1,4 +1,7 @@
 <?php
+require_once(DIR_DOMPDF . 'autoload.inc.php');
+use Dompdf\Dompdf;
+
 class ModelCheckoutOrder extends Model {
 	public function addOrder($data) {
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "order` SET invoice_prefix = '" . $this->db->escape($data['invoice_prefix']) . "', store_id = '" . (int)$data['store_id'] . "', store_name = '" . $this->db->escape($data['store_name']) . "', store_url = '" . $this->db->escape($data['store_url']) . "', customer_id = '" . (int)$data['customer_id'] . "', customer_group_id = '" . (int)$data['customer_group_id'] . "', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', custom_field = '" . $this->db->escape(isset($data['custom_field']) ? json_encode($data['custom_field']) : '') . "', payment_firstname = '" . $this->db->escape($data['payment_firstname']) . "', payment_lastname = '" . $this->db->escape($data['payment_lastname']) . "', payment_company = '" . $this->db->escape($data['payment_company']) . "', payment_address_1 = '" . $this->db->escape($data['payment_address_1']) . "', payment_address_2 = '" . $this->db->escape($data['payment_address_2']) . "', payment_city = '" . $this->db->escape($data['payment_city']) . "', payment_postcode = '" . $this->db->escape($data['payment_postcode']) . "', payment_country = '" . $this->db->escape($data['payment_country']) . "', payment_country_id = '" . (int)$data['payment_country_id'] . "', payment_zone = '" . $this->db->escape($data['payment_zone']) . "', payment_zone_id = '" . (int)$data['payment_zone_id'] . "', payment_address_format = '" . $this->db->escape($data['payment_address_format']) . "', payment_custom_field = '" . $this->db->escape(isset($data['payment_custom_field']) ? json_encode($data['payment_custom_field']) : '') . "', payment_method = '" . $this->db->escape($data['payment_method']) . "', payment_code = '" . $this->db->escape($data['payment_code']) . "', shipping_firstname = '" . $this->db->escape($data['shipping_firstname']) . "', shipping_lastname = '" . $this->db->escape($data['shipping_lastname']) . "', shipping_company = '" . $this->db->escape($data['shipping_company']) . "', shipping_address_1 = '" . $this->db->escape($data['shipping_address_1']) . "', shipping_address_2 = '" . $this->db->escape($data['shipping_address_2']) . "', shipping_city = '" . $this->db->escape($data['shipping_city']) . "', shipping_postcode = '" . $this->db->escape($data['shipping_postcode']) . "', shipping_country = '" . $this->db->escape($data['shipping_country']) . "', shipping_country_id = '" . (int)$data['shipping_country_id'] . "', shipping_zone = '" . $this->db->escape($data['shipping_zone']) . "', shipping_zone_id = '" . (int)$data['shipping_zone_id'] . "', shipping_address_format = '" . $this->db->escape($data['shipping_address_format']) . "', shipping_custom_field = '" . $this->db->escape(isset($data['shipping_custom_field']) ? json_encode($data['shipping_custom_field']) : '') . "', shipping_method = '" . $this->db->escape($data['shipping_method']) . "', shipping_code = '" . $this->db->escape($data['shipping_code']) . "', comment = '" . $this->db->escape($data['comment']) . "', total = '" . (float)$data['total'] . "', affiliate_id = '" . (int)$data['affiliate_id'] . "', commission = '" . (float)$data['commission'] . "', marketing_id = '" . (int)$data['marketing_id'] . "', tracking = '" . $this->db->escape($data['tracking']) . "', language_id = '" . (int)$data['language_id'] . "', currency_id = '" . (int)$data['currency_id'] . "', currency_code = '" . $this->db->escape($data['currency_code']) . "', currency_value = '" . (float)$data['currency_value'] . "', ip = '" . $this->db->escape($data['ip']) . "', forwarded_ip = '" .  $this->db->escape($data['forwarded_ip']) . "', user_agent = '" . $this->db->escape($data['user_agent']) . "', accept_language = '" . $this->db->escape($data['accept_language']) . "', date_added = NOW(), date_modified = NOW()");
@@ -413,7 +416,7 @@ class ModelCheckoutOrder extends Model {
 				$data['text_price'] = $language->get('text_new_price');
 				$data['text_total'] = $language->get('text_new_total');
 				$data['text_footer'] = $language->get('text_new_footer');
-	
+
 				$data['logo'] = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');
 				$data['store_name'] = $order_info['store_name'];
 				$data['store_url'] = $order_info['store_url'];
@@ -425,7 +428,7 @@ class ModelCheckoutOrder extends Model {
 				} else {
 					$data['download'] = '';
 				}
-	
+
 				$data['order_id'] = $order_id;
 				$data['date_added'] = date($language->get('date_format_short'), strtotime($order_info['date_added']));
 				$data['payment_method'] = $order_info['payment_method'];
@@ -637,7 +640,47 @@ class ModelCheckoutOrder extends Model {
 					$text .= $language->get('text_new_comment') . "\n\n";
 					$text .= $order_info['comment'] . "\n\n";
 				}
+
+				$dompdf = new Dompdf();
+
+				$email = $this->config->get('config_email');
+				$address = $this->config->get('config_address');
+				$img_url = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');
+				$date_added = date($language->get('date_format_short'), strtotime($order_info['date_added']));
+				$payment_address = $order_info['payment_address_1'];
+
+				$total = 0;
+				$products = array();
+				foreach ($order_product_query->rows as $product) {
+					$product_info = array(
+						'description' => $product['name'] . ' (' . $product['model'] . ')', 
+						'quantity' => $product['quantity'], 
+						'price' => $this->currency->format($product['price'], $this->session->data['currency']), 
+						'total' => $this->currency->format($product['total'], $this->session->data['currency'])
+						);
+					array_push($products, $product_info);
+
+					$total += $product_info['total'];
+				}
+
+				$tax = $total * 0.19;
+				$netto = $total - $tax;
+
+				$total = $this->currency->format($total, $this->session->data['currency']);
+				$netto = $this->currency->format($netto, $this->session->data['currency']);
+				$tax = $this->currency->format($tax, $this->session->data['currency']);
+
+				$html = $this->getHtml($order_id, $email, $address, $img_url, $date_added, $payment_address, $products, $total, $tax, $netto);
+
+				$dompdf->loadHtml($html);
+				$dompdf->setPaper('A4', 'portrait');
+				$dompdf->render();
+
+				$pdf_file_name =  DIR_PDF_DOWNLOAD . date('Y-m-d') . '_rechnung_nr' . $order_id . '.pdf';
+				$output = $dompdf->output();
+				file_put_contents($pdf_file_name, $output);
 	
+				$text .= '';
 				$text .= $language->get('text_new_footer') . "\n\n";
 	
 				$mail = new Mail();
@@ -655,6 +698,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setHtml($this->load->view('mail/order', $data));
 				$mail->setText($text);
+				$mail->addAttachment($pdf_file_name);
 				$mail->send();
 	
 				// Admin Alert Mail
@@ -804,5 +848,195 @@ class ModelCheckoutOrder extends Model {
 				$mail->send();
 			}
 		}
+	}
+
+	private function getHtml($order_id, $email, $address,
+	 						 $img_url, $date_added, $payment_address,
+	  						 $products, $total, $tax, $netto) {
+		// <div id="image">
+		// 		<img src="' . $img_url . '" alt="No image">
+		// 	</div>
+		$html =
+			'<html>
+			<head>
+			<style>
+			body {
+			margin-left: 70px;
+			margin-right: 70px;
+			}
+
+			#address {
+			position: absolute;
+			top: 300px;
+			left: 400px;
+			font-size: 14px;
+			}
+
+			#image {
+			position: absolute;
+			top: 10px;
+			left: 400px;
+			width: 100px;
+			height: 100px;
+			}
+
+			#image image {
+			width:100%;
+			height: 100%;
+			}
+
+			#theader {
+			margin-top: 150px;
+			margin-bottom: 120px;
+			font-size: 14px;
+			width:100%;
+			}
+			#theader td {
+			align: center;
+			}
+
+			#tbillheader {
+			width:40%;
+			margin-bottom: 20px;
+			}
+
+			#tbillheader td {
+			align: left;
+			}
+
+			#tbill {
+			width: 100%;
+			bordercolor: black;
+			table-layout: auto;
+			border-collapse: collapse;
+			margin: 40px 0;
+			}
+
+			#tbill .absorbing-column {
+			width: 100%;
+			}
+
+			#tbill th {
+			background-color: #CCCCCC;
+			padding: 5px;
+			}
+
+			#tbill td {
+			background-color: #EEEEEE;
+			align: center;
+			padding: 5px;
+			}
+
+			#tbillfooter {
+			margin-top: 20px;
+			margin-left: 100px;
+			}
+
+			#text1 {
+			margin-top: 50px;
+			}
+
+			#text2 {
+			position: fixed;
+			top:750;
+			width:100%;
+			text-align:center
+			}
+
+			</style>
+			</head>
+
+			<body>
+
+			<table id="theader">
+			<tr>
+			<td>Hemd-Sitzt</td>
+			</tr>
+			<tr>
+			<td>Einzelunternehmen</td>
+			</tr>
+			<tr>
+			<td>Vertreten durch Alexander, Schloh</td>
+			</tr>
+			<tr>
+			<td>Adresse: ' . $address . '</td>
+			</tr>
+			<tr>
+			<td>' . $email . '</td>
+			</tr>
+			</table>
+
+
+
+			<div id="address">
+			<p>Lieferadresse</p>
+			<p>' . $payment_address . '</p>
+			</div>
+
+			<h2 style="margin-top: 50px;">Rechnung Nr ' . $order_id . '</h2>
+			<table id="tbillheader">
+			<tr>
+			<td>Rechnungsdatum</td>
+			<td>' . $date_added . '</td>
+			</tr>
+			<tr>
+			<td>Bestelldatum</td>
+			<td>' . $date_added . '</td>
+			</tr>
+			</table>
+
+			<table id="tbill">
+			<thead>
+			<tr>
+			<th align="left">Artikel</th>
+			<th align="center">Anzahl</th>
+			<th align="center">Preis</th>
+			<th align="center">Summe</th>
+			</tr>
+			</thead>
+			<tbody>';
+
+			foreach ($products as $product) {
+				$html .= 
+				'<tr>
+				<td class="absorbing-column">' . $product['description'] . '</td>
+				<td align="center">' . $product['quantity'] . '</td>
+				<td align="center">' . $product['price'] . '</td>
+				<td align="center">' . $product['total'] . '</td>
+				</tr>';
+			}
+
+
+			$html .= 
+				'</tbody>
+				</table>
+				<table id="tbillfooter">
+				<tr>
+				<td>Gesamt netto</td>
+				<td>' . $netto . '</td>
+				</tr>
+				<tr>
+				<td>Umsatzteuer (19,0%)</td>
+				<td>' . $tax . '</td>
+				</tr>
+				<tfoot>
+				<tr>
+				<td>Gesammtsumme</td>
+				<td>' . $total . '</td>
+				</tr>
+				</tfoot>
+				</table>
+
+				<div id="text1">Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.</div>
+
+				<p id="text2">Wir bedanken uns für ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
+				IBAN: DE02 2007 0024 0242 9157 01 BIC: DEUTDEDBHAM<br>
+				Kontoinhaber: Alexander Schloh<br>
+				Bitte geben Sie ihre Rechnungsnummer als Verwendungszweck an. z.B. Verwendungszweck Rechnung Nr 12345</p>
+
+				</body>
+				</html>';
+
+		return $html;
 	}
 }
