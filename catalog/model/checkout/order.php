@@ -645,11 +645,12 @@ class ModelCheckoutOrder extends Model {
 
 				$email = $this->config->get('config_email');
 				$address = $this->config->get('config_address');
-				$img_url = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');
+				//$this->config->get('config_url') . 
+				$img_url = './image/' . $this->config->get('config_logo');
 				$date_added = date($language->get('date_format_short'), strtotime($order_info['date_added']));
 				$payment_address = $order_info['payment_address_1'];
 
-				$total = 0;
+				$total_price = 0;
 				$products = array();
 				foreach ($order_product_query->rows as $product) {
 					$product_info = array(
@@ -660,17 +661,27 @@ class ModelCheckoutOrder extends Model {
 						);
 					array_push($products, $product_info);
 
-					$total += $product_info['total'];
+					$total_price += $product['total'];
 				}
 
-				$tax = $total * 0.19;
-				$netto = $total - $tax;
+				$tax_price = $total_price * 0.19;
+				$netto_price = $total_price - $tax_price;
 
-				$total = $this->currency->format($total, $this->session->data['currency']);
-				$netto = $this->currency->format($netto, $this->session->data['currency']);
-				$tax = $this->currency->format($tax, $this->session->data['currency']);
+				$total = $this->currency->format($total_price, $this->session->data['currency']);
+				$netto = $this->currency->format($netto_price, $this->session->data['currency']);
+				$tax = $this->currency->format($tax_price, $this->session->data['currency']);
 
-				$html = $this->getHtml($order_id, $email, $address, $img_url, $date_added, $payment_address, $products, $total, $tax, $netto);
+				$html = $this->getHtml(
+					$order_id, 
+					$email, 
+					$address, 
+					$img_url,
+					$date_added, 
+					$payment_address, 
+					$products, 
+					$total, 
+					$tax, 
+					$netto);
 
 				$dompdf->loadHtml($html);
 				$dompdf->setPaper('A4', 'portrait');
@@ -850,39 +861,40 @@ class ModelCheckoutOrder extends Model {
 		}
 	}
 
-	private function getHtml($order_id, $email, $address,
-	 						 $img_url, $date_added, $payment_address,
-	  						 $products, $total, $tax, $netto) {
-		// <div id="image">
-		// 		<img src="' . $img_url . '" alt="No image">
-		// 	</div>
+	private function getHtml(
+		$order_id, 
+		$email, 
+		$address,
+		$img_url, 
+		$date_added, 
+		$payment_address,
+		$products, 
+		$total, 
+		$tax, 
+		$netto
+		) {
 		$html =
 			'<html>
 			<head>
 			<style>
 			body {
-			margin-left: 70px;
-			margin-right: 70px;
+			margin-left: 50px;
+			margin-right: 50px;
+			}
+
+			#logo {
+			position: absolute;
+			top: 10px;
+			left: 370px;
+			width: 220px;
+			height: 400px;
 			}
 
 			#address {
 			position: absolute;
-			top: 300px;
+			top: 430px;
 			left: 400px;
 			font-size: 14px;
-			}
-
-			#image {
-			position: absolute;
-			top: 10px;
-			left: 400px;
-			width: 100px;
-			height: 100px;
-			}
-
-			#image image {
-			width:100%;
-			height: 100%;
 			}
 
 			#theader {
@@ -929,16 +941,11 @@ class ModelCheckoutOrder extends Model {
 
 			#tbillfooter {
 			margin-top: 20px;
-			margin-left: 100px;
 			}
 
-			#text1 {
-			margin-top: 50px;
-			}
-
-			#text2 {
+			#text_bottom {
 			position: fixed;
-			top:750;
+			top:650;
 			width:100%;
 			text-align:center
 			}
@@ -947,6 +954,7 @@ class ModelCheckoutOrder extends Model {
 			</head>
 
 			<body>
+			<img id="logo" src="' . $img_url . '" alt="_">
 
 			<table id="theader">
 			<tr>
@@ -1010,7 +1018,7 @@ class ModelCheckoutOrder extends Model {
 			$html .= 
 				'</tbody>
 				</table>
-				<table id="tbillfooter">
+				<table id="tbillfooter" align="right">
 				<tr>
 				<td>Gesamt netto</td>
 				<td>' . $netto . '</td>
@@ -1027,16 +1035,14 @@ class ModelCheckoutOrder extends Model {
 				</tfoot>
 				</table>
 
-				<div id="text1">Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.</div>
+				<p id="text_bottom">Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.<br><br><br>
 
-				<p id="text2">Wir bedanken uns für ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
-				PayPal ещё нету, скоро заведу<br>
+				Wir bedanken uns für ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
+				PayPal ist noch nicht fertig<br>
 				Bankverbindung:Alexander Schloh, Konto:242915701 BLZ:20070024 Deutsche Bank<br>
 				IBAN:DE02200700240242915791 SWIFT(BIC):DEUTDEDBHAM<br>
-				USt.-Nr. не нашел еще<br>
-				USt.-IdNr. DE295106251<br>
-				Kontoinhaber: Alexander Schloh<br>
-				Bitte geben Sie ihre Rechnungsnummer als Verwendungszweck an. z.B. Verwendungszweck Rechnung Nr 12345</p>
+				USt.-Nr. wurde noch nicht gefunden<br>
+				USt.-IdNr. DE295106251<br></p>
 
 				</body>
 				</html>';
