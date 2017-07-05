@@ -27,6 +27,9 @@
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 
+<!-- For FireFox -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 <!-- Gallery -->
 <link href="catalog/view/theme/default/stylesheet/gallery.css" rel="stylesheet" type="text/css" />
 
