@@ -1030,7 +1030,11 @@ class ModelCheckoutOrder extends Model {
 				<div id="text1">Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.</div>
 
 				<p id="text2">Wir bedanken uns für ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
-				IBAN: DE02 2007 0024 0242 9157 01 BIC: DEUTDEDBHAM<br>
+				PayPal ещё нету, скоро заведу<br>
+				Bankverbindung:Alexander Schloh, Konto:242915701 BLZ:20070024 Deutsche Bank<br>
+				IBAN:DE02200700240242915791 SWIFT(BIC):DEUTDEDBHAM<br>
+				USt.-Nr. не нашел еще<br>
+				USt.-IdNr. DE295106251<br>
 				Kontoinhaber: Alexander Schloh<br>
 				Bitte geben Sie ihre Rechnungsnummer als Verwendungszweck an. z.B. Verwendungszweck Rechnung Nr 12345</p>
 

@@ -100,9 +100,10 @@
   </div>
   <?php } ?>
   <?php } ?>
+  <hr>
 </div>
 
-<div class="inline-headers">
+<div>
   <span class="h4">Mit <a href="<?php echo $url_agb; ?>">AGB</a> bin einverstanden</span>
   <input type="checkbox" onchange="changeButton(this.checked);">
 </div>
