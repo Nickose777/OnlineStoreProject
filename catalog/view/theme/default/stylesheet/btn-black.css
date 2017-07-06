@@ -1,55 +1,38 @@
-.btn-black {
+.btn-black, .btn-grey {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  width: 220px; 
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-black {
   background: #3D3D3D;
   background-image: -webkit-linear-gradient(top, #3D3D3D, #272727);
   background-image: -moz-linear-gradient(top, #3D3D3D, #272727);
   background-image: -ms-linear-gradient(top, #3D3D3D, #272727);
   background-image: -o-linear-gradient(top, #3D3D3D, #272727);
   background-image: linear-gradient(to bottom, #3D3D3D, #272727);
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-  width: 220px; 
-  padding: 10px 20px 10px 20px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn-black:hover {
-  background: #181818;
-  color: #ffffff;
-  text-decoration: none;
 }
 
 .btn-grey {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   background: #595959;
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-  width: 220px; 
-  padding: 10px 20px 10px 20px;
-  text-align: center;
-  text-decoration: none;
 }
 
-.btn-grey:hover {
+.btn-black:hover, .btn-grey:hover {
   background: #181818;
   color: #ffffff;
   text-decoration: none;
 }
 
 @media screen and (max-width: 480px) {
-    .btn-black {
+    .btn-black, .btn-grey {
       font-size: 14px;
-      width: 100px; 
-    }
-    .btn-grey {
-      font-size: 14px;
-      width: 100px; 
+      width: 180px; 
     }
 }

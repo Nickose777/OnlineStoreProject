@@ -945,7 +945,7 @@ class ModelCheckoutOrder extends Model {
 
 			#text_bottom {
 			position: fixed;
-			top:650;
+			top:620;
 			width:100%;
 			text-align:center
 			}
