@@ -1035,14 +1035,17 @@ class ModelCheckoutOrder extends Model {
 				</tfoot>
 				</table>
 
-				<p id="text_bottom">Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.<br><br><br>
+				<p id="text_bottom">
+					Rechnungen im privaten nichtunternehmerischen Bereich unterliegen einer Aufbewahrungsfrist von mindestens 2, geschäftlich 10 Jahre.<br><br><br>
 
-				Wir bedanken uns für ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
-				PayPal ist noch nicht fertig<br>
-				Bankverbindung:Alexander Schloh, Konto:242915701 BLZ:20070024 Deutsche Bank<br>
-				IBAN:DE02200700240242915791 SWIFT(BIC):DEUTDEDBHAM<br>
-				USt.-Nr. wurde noch nicht gefunden<br>
-				USt.-IdNr. DE295106251<br></p>
+					Wir bedanken uns für Ihre Bestellung und ersuchen um Überweisung auf unser Bankkonto<br>
+					PayPal ist noch nicht fertig<br>
+					Bankverbindung:Alexander Schloh, Konto:242915701 BLZ:20070024 Deutsche Bank<br>
+					IBAN:DE02200700240242915791 SWIFT(BIC):DEUTDEDBHAM<br>
+					USt.-Nr. wurde noch nicht gefunden<br>
+					USt.-IdNr. DE295106251<br>
+					Vielen dank für Ihre Bestellung<br>
+				</p>
 
 				</body>
 				</html>';
