@@ -104,7 +104,7 @@
 </div>
 
 <div>
-  <span class="h4">Mit <a href="<?php echo $url_agb; ?>">AGB</a> bin einverstanden</span>
+  <span class="h4">Ich habe <a href="<?php echo $url_agb; ?>">AGB</a> gelesen und bin damit einverstanden</span>
   <input type="checkbox" onchange="changeButton(this.checked);">
 </div>
 <button type="button" id="confirm_order" class="center-block btn-black"><?php echo $text_order; ?></button>
